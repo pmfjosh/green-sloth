@@ -1,0 +1,43 @@
+import type { ModelData } from "./types";
+
+export const models: ModelData = {
+  Matuszynska2016: {
+    DOI: "https://doi.org/10.1016/j.bbabio.2016.09.003",
+    tags: {
+      "Part of Photosynthesis": ["PSII", "ATP Synthase", "Cytochrome b6f", "PQ Cycle"],
+      Demonstrations: ["Day Simulation", "PAM Simulation", "Photosynthesis MCA", "Fitting of NPQ"],
+    },
+  },
+  Saadat2021: {
+    DOI: "https://doi.org/10.3389/fpls.2021.750580",
+    tags: {
+      "Part of Photosynthesis": ["PSII", "ATP Synthase", "Cytochrome b6f", "PQ Cycle", "PC", "FNR", "PSI", "CBB Cycle"],
+      Demonstrations: ["Day Simulation", "FvCB Addon", "PAM Simulation", "Photosynthesis MCA", "Fitting of NPQ"],
+    },
+  },
+  Bellasio2019: {
+    DOI: "https://doi.org/10.1007/s11120-018-0601-1",
+    tags: {
+      "Part of Photosynthesis": ["PSII", "CBB Cycle", "ATP Synthase", "FNR"],
+      Demonstrations: ["Day Simulation", "FvCB Addon", "Photosynthesis MCA"],
+    },
+  },
+  Li2021: {
+    DOI: "https://doi.org/10.1038/s41477-021-00947-5",
+    tags: {
+      "Part of Photosynthesis": ["PSII", "ATP Synthase", "Cytochrome b6f", "PQ Cycle", "PC", "FNR", "PSI", "CBB Cycle", "OEC"],
+      Demonstrations: ["PAM Simulation", "Fitting of NPQ"],
+    },
+  },
+  Fuente2024: {
+    DOI: "https://doi.org/10.1016/j.plaphy.2024.109138",
+    tags: {
+      "Part of Photosynthesis": ["OEC", "PQ Cycle", "PSII", "PSI", "ATP Synthase"],
+      Demonstrations: ["Day Simulation", "PAM Simulation", "Photosynthesis MCA", "Fitting of NPQ"],
+    },
+  },
+};
+
+export const modelNames = Object.keys(models);
+
+export const GH_RAW = "https://raw.githubusercontent.com/ElouenCorvest/GreenSloth/refs/heads/main";
