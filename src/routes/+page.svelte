@@ -5,14 +5,11 @@
     Button,
     H1,
     H2,
-    Link,
+    Imprint,
     Section,
     Tabs,
     Text,
   } from "@computational-biology-aachen/design";
-  import Footer from "@computational-biology-aachen/design/SectionFooter.svelte";
-  import { faGithub } from "@fortawesome/free-brands-svg-icons";
-  import Fa from "svelte-fa";
   import "../app.css";
 
   // Apparatus → query param mapping (mirrors the tag keys in models.ts)
@@ -584,23 +581,7 @@
   </div>
 </Section>
 
-<Footer>
-  <H2 color="light">Imprint</H2>
-  GreenSloth - Photosynthesis Models at your Pace <br />
-  Anbieter i.S.d. TDG/MDStV: Prof. Dr. Anna B. Matuszyńska<br />
-  Worringerweg 1 52074 Aachen <br />
-  Sammelbau Biologie, Bauteil 42 C, Erdgeschoss, Raum 041 <br />
-  Work Phone: +49 241 80 25817 <br />
-
-  Verantwortlich i.S.d. § 6 Abs. 2 MDStV: <br />
-  Prof. Dr. Anna B. Matuszyńska <br />
-  Design und Umsetzung Elouen Corvest & Dr. Marvin van Aalst <Link
-    color="light"
-    href="https://github.com/Computational-Biology-Aachen/greensloth"
-    ><Fa icon={faGithub} /></Link
-  ><br />
-  (c) 2026 Prof. Dr. Anna B. Matuszyńska, Alle Rechte vorbehalten.
-</Footer>
+<Imprint github="https://github.com/Computational-Biology-Aachen/greensloth" />
 
 <style>
   .hero-inner {
