@@ -18,7 +18,6 @@
     "@sveltejs/kit": ">=2.61.1",
     "@sveltejs/vite-plugin-svelte": ">=7.0.0",
     "@types/node": "^25.0.0",
-    "@types/papaparse": "^5.5.2",
     "eslint": ">=10.0.0",
     "eslint-config-prettier": ">=10.0.0",
     "eslint-plugin-svelte": ">=3.18.0",
@@ -29,15 +28,17 @@
     "svelte-check": ">=4.5.0",
     "typescript": ">=6.0.0",
     "typescript-eslint": ">=8.60.1",
-    "vite": ">=8.0.16"
+    "vite": ">=8.0.16",
+    "vite-plugin-wasm": ">=3.3.0"
   },
   "dependencies": {
     "@computational-biology-aachen/design": "github:Computational-Biology-Aachen/design",
     "@computational-biology-aachen/mxlweb-core": "github:Computational-Biology-Aachen/mxlweb-core",
+    "@fortawesome/free-brands-svg-icons": ">=7.2.0",
+    "@fortawesome/free-solid-svg-icons": ">=7.2.0",
     "@sveltejs/adapter-static": ">=3.0.10",
     "chroma-js": "^3.1.2",
     "marked": "^18.0.4",
-    "papaparse": "^5.5.3",
-    "plotly.js-dist": "^3.6.0"
+    "wat-compiler": "^1.1.1"
   }
 }

@@ -1,10 +1,70 @@
+import { cpSync, readdirSync, readFileSync } from "fs";
+import { createRequire } from "module";
+import { dirname, extname, join } from "path";
 import { sveltekit } from "@sveltejs/kit/vite";
-import { defineConfig } from "vite";
+import { defineConfig, type Plugin } from "vite";
+import wasm from "vite-plugin-wasm";
+
+const require = createRequire(import.meta.url);
+const coreStatic = join(
+  dirname(
+    require.resolve("@computational-biology-aachen/mxlweb-core/package.json"),
+  ),
+  "static",
+);
+
+const MIME: Record<string, string> = {
+  ".js": "application/javascript",
+  ".wasm": "application/wasm",
+};
+
+// The wasm RADAU5 backend loads its Emscripten runtime (radau5.js/.wasm) at
+// runtime from `<base>/wasm/`. mxlweb-core ships those prebuilt under its
+// `static/` dir; serve them in dev and copy them into the client build so
+// adapter-static emits them. No local `build:wasm` needed.
+function serveAndCopyCoreStatic(): Plugin {
+  return {
+    name: "mxlweb-core-static",
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        const url = req.url?.split("?")[0] ?? "";
+        const filePath = join(coreStatic, url);
+        try {
+          const content = readFileSync(filePath);
+          res.setHeader(
+            "Content-Type",
+            MIME[extname(filePath)] ?? "application/octet-stream",
+          );
+          res.end(content);
+        } catch {
+          next();
+        }
+      });
+    },
+    closeBundle() {
+      if (this.environment?.name !== "client") return;
+      const wasmSrc = join(coreStatic, "wasm");
+      const wasmDest = join(".svelte-kit", "output", "client", "wasm");
+      const files = readdirSync(wasmSrc).filter((f) => f !== ".gitkeep");
+      cpSync(wasmSrc, wasmDest, {
+        recursive: true,
+        filter: (f) => !f.endsWith(".gitkeep"),
+      });
+      this.warn?.(`copied ${files.length} wasm files → ${wasmDest}`);
+    },
+  };
+}
 
 export default defineConfig({
-  plugins: [sveltekit()],
+  plugins: [sveltekit(), wasm(), serveAndCopyCoreStatic()],
+  worker: {
+    format: "es",
+  },
   optimizeDeps: {
-    exclude: ["@computational-biology-aachen/design"],
+    exclude: [
+      "@computational-biology-aachen/design",
+      "@computational-biology-aachen/mxlweb-core",
+    ],
   },
   server: { port: 5177, strictPort: true },
 });
