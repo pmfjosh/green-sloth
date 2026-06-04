@@ -41,27 +41,6 @@
   >
 {/snippet}
 
-{#if model.parameters.size > 0}
-  <Accordion title="Parameters">
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Symbol</th><th>ID</th><th>Value</th></tr>
-        </thead>
-        <tbody>
-          {#each model.parameters as [id, par] (id)}
-            <tr>
-              {@render symCell(id)}
-              <td class="id">{id}</td>
-              <td class="num">{par.value}</td>
-            </tr>
-          {/each}
-        </tbody>
-      </table>
-    </div>
-  </Accordion>
-{/if}
-
 {#if model.variables.size > 0}
   <Accordion title="Variables">
     <div class="table-wrap">
@@ -84,6 +63,27 @@
                   {vari.value}
                 {/if}
               </td>
+            </tr>
+          {/each}
+        </tbody>
+      </table>
+    </div>
+  </Accordion>
+{/if}
+
+{#if model.parameters.size > 0}
+  <Accordion title="Parameters">
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Symbol</th><th>ID</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+          {#each model.parameters as [id, par] (id)}
+            <tr>
+              {@render symCell(id)}
+              <td class="id">{id}</td>
+              <td class="num">{par.value}</td>
             </tr>
           {/each}
         </tbody>
