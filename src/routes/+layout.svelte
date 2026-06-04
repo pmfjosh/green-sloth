@@ -4,6 +4,7 @@
   import greenslothLogo from "$lib/assets/greensloth-logo.svg";
   import {
     CollapseToBurger,
+    Imprint,
     Navbar,
     NavGH,
     NavItem,
@@ -41,12 +42,15 @@
   <CollapseToBurger collapseAt="768px">
     <NavItem href="{base}/">Home</NavItem>
     <NavItem href="{base}/models">Models</NavItem>
+    <NavItem href="{base}/compare">Compare</NavItem>
     <NavItem href="{base}/about">About Us</NavItem>
   </CollapseToBurger>
   <NavGH href="https://github.com/Computational-Biology-Aachen/greensloth" />
 </Navbar>
 
 {@render children()}
+
+<Imprint github="https://github.com/Computational-Biology-Aachen/greensloth" />
 
 <style>
   .brand {
