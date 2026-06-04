@@ -52,6 +52,7 @@ export function initModel(): ModelBuilder {
     .addParameter("PPFD", {
       value: 100.0,
       texName: "PPFD",
+      slider: { min: "100", max: "2000", step: "10" },
     })
     .addParameter("bH", {
       value: 100.0,

@@ -13,8 +13,9 @@ import {
 export function initModel(): ModelBuilder {
   return new ModelBuilder()
     .addParameter("PPFD", {
-      value: 0.0,
+      value: 100.0,
       texName: "PPFD",
+      slider: { min: "100", max: "2000", step: "10" },
     })
     .addParameter("k_recomb", {
       value: 0.33,

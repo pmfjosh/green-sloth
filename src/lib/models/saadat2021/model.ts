@@ -26,7 +26,11 @@ import {
  */
 export function initModel(): ModelBuilder {
   return new ModelBuilder()
-    .addParameter("PPFD", { value: 100.0, texName: "PPFD" })
+    .addParameter("PPFD", {
+      value: 100.0,
+      texName: "PPFD",
+      slider: { min: "100", max: "2000", step: "10" },
+    })
     .addParameter("CO2__dissolved_", {
       value: 0.2,
       texName: "CO2 (dissolved)",

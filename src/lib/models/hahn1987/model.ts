@@ -277,6 +277,7 @@ export function initModel(): ModelBuilder {
     .addVariable("CO2", {
       value: 0.33,
       texName: "CO2",
+      slider: { min: "0.1", max: "1.0", step: "0.01" },
     })
     .addVariable("O2", {
       value: 0.245,
