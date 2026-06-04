@@ -19,7 +19,13 @@
     Section,
     SectionHeader,
     Sub,
+    Table,
+    Tbody,
+    Td,
     Text,
+    Th,
+    Thead,
+    Tr,
     Ul,
   } from "@computational-biology-aachen/design";
   import type { ModelBuilder } from "@computational-biology-aachen/mxlweb-core";
@@ -48,6 +54,12 @@
         li: Li,
         code: Code,
         pre: Pre,
+        table: Table,
+        thead: Thead,
+        tbody: Tbody,
+        tr: Tr,
+        th: Th,
+        td: Td,
       },
     },
   ];
