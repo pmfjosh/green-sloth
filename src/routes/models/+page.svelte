@@ -79,7 +79,10 @@
   <H1 color="light">Models</H1>
 </SectionHeader>
 
-<Section variant="light" width="narrow">
+<Section
+  variant="light"
+  width="narrow"
+>
   <div class="scheme-wrapper">
     <svg
       id="photosynthesis-scheme"
@@ -626,10 +629,10 @@
   .facet-label {
     margin: 0;
     color: var(--color-text-muted);
-    font-size: 0.85rem;
     font-weight: var(--weight-semibold);
-    text-transform: uppercase;
+    font-size: 0.85rem;
     letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
 
   .empty {
@@ -652,9 +655,9 @@
   /* Apparatuses are greyed out by default; selecting the matching tag
      restores their colour. */
   .apparatus {
-    cursor: pointer;
     filter: grayscale(1) opacity(0.5);
     transition: filter 150ms ease;
+    cursor: pointer;
   }
 
   .apparatus.selected {
@@ -678,8 +681,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: var(--space-6);
+    margin: 0 auto;
     width: 100%;
     max-width: var(--max-width);
-    margin: 0 auto;
   }
 </style>

@@ -33,7 +33,12 @@
 </script>
 
 {#snippet symCell(id: string)}
-  <td class="sym"><Math tex={sym(id)} display={false} /></td>
+  <td class="sym"
+    ><Math
+      tex={sym(id)}
+      display={false}
+    /></td
+  >
 {/snippet}
 
 {#if model.parameters.size > 0}
@@ -71,7 +76,10 @@
               <td class="id">{id}</td>
               <td class="num">
                 {#if valueTex(vari.value)}
-                  <Math tex={valueTex(vari.value)!} display={false} />
+                  <Math
+                    tex={valueTex(vari.value)!}
+                    display={false}
+                  />
                 {:else}
                   {vari.value}
                 {/if}
@@ -122,9 +130,17 @@
             <tr>
               {@render symCell(id)}
               <td class="id">{id}</td>
-              <td class="eq"><Math tex={rxn.fn.toTex(texNames)} display={false} /></td>
+              <td class="eq"
+                ><Math
+                  tex={rxn.fn.toTex(texNames)}
+                  display={false}
+                /></td
+              >
               <td class="eq">
-                <Math tex={stoichToTex(rxn.stoichiometry, texNames)} display={false} />
+                <Math
+                  tex={stoichToTex(rxn.stoichiometry, texNames)}
+                  display={false}
+                />
               </td>
             </tr>
           {/each}
@@ -136,8 +152,8 @@
 
 <style>
   .table-wrap {
-    overflow-x: auto;
     padding: var(--space-2);
+    overflow-x: auto;
   }
 
   table {
@@ -148,10 +164,10 @@
 
   th,
   td {
+    vertical-align: middle;
     border-bottom: 1px solid var(--color-border);
     padding: 0.35rem 0.75rem;
     text-align: left;
-    vertical-align: middle;
   }
 
   th {
@@ -161,9 +177,9 @@
   }
 
   .id {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
     color: var(--color-text-muted);
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
   }
 
   .num {
