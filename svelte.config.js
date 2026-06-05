@@ -31,7 +31,7 @@ const config = {
       strict: true,
     }),
     paths: {
-      base: process.argv.includes("dev") ? "" : "/greensloth",
+      base: process.argv.includes("dev") ? "" : "/green-sloth",
     },
   },
   preprocess: [vitePreprocess()],

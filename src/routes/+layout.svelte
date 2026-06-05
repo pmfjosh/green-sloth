@@ -46,12 +46,12 @@
     <NavItem href="{base}/compare">Compare</NavItem>
     <NavItem href="{base}/about">About Us</NavItem>
   </CollapseToBurger>
-  <NavGH href="https://github.com/Computational-Biology-Aachen/greensloth" />
+  <NavGH href="https://github.com/Computational-Biology-Aachen/green-sloth" />
 </Navbar>
 
 {@render children()}
 
-<Imprint github="https://github.com/Computational-Biology-Aachen/greensloth" />
+<Imprint github="https://github.com/Computational-Biology-Aachen/green-sloth" />
 
 <style>
   .brand {
