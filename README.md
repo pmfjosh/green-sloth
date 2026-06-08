@@ -25,6 +25,7 @@ npm run lint         # ESLint check
 `GreenSloth` is part of a larger ecosystem:
 
 - [mxlweb-core](https://github.com/Computational-Biology-Aachen/mxlweb-core) — shared model-building and compute engine powering this site
+- [design](https://github.com/Computational-Biology-Aachen/design) — shared CPBL design system: tokens + Svelte components
 - [MxlWeb](https://github.com/Computational-Biology-Aachen/mxl-web) — browser-side ODE model explorer
 - [MxlPy](https://github.com/Computational-Biology-Aachen/MxlPy) — Python package for mechanistic learning
 - [MxlBricks](https://github.com/Computational-Biology-Aachen/mxl-bricks) — pre-defined reaction bricks on top of MxlPy
