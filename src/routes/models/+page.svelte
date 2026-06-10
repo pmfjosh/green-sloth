@@ -39,6 +39,9 @@
   let active = $state<Record<string, Set<string>>>({});
 
   function toggle(cat: string, tag: string) {
+    // plain Set updated immutably below (active is reassigned), so reactivity
+    // comes from the reassignment, not from mutating the Set
+    // eslint-disable-next-line svelte/prefer-svelte-reactivity
     const next = new Set(active[cat] ?? []);
     if (next.has(tag)) next.delete(tag);
     else next.add(tag);
