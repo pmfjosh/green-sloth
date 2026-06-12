@@ -4,10 +4,7 @@
 -->
 
 <script lang="ts">
-  import {
-    LineChart,
-    type PhaseRegion,
-  } from "@computational-biology-aachen/design";
+  import { type PhaseRegion } from "@computational-biology-aachen/design";
   import type { KineticModelBuilder } from "@computational-biology-aachen/mxlweb-core";
   import {
     computeNpq,
@@ -18,6 +15,7 @@
     type PamGroup,
   } from "@computational-biology-aachen/mxlweb-core/pam";
   import { onMount } from "svelte";
+  import AnalysisChart from "./AnalysisChart.svelte";
   import SimErrDisplay from "./SimErrDisplay.svelte";
   import type { Backend } from "./stores/backends";
   import {
@@ -25,6 +23,7 @@
     type SimulationError,
     type SimulationResult,
   } from "./stores/workerStore";
+  import type { PlotLayout } from "./types";
   import { arrayColumn } from "./utils";
 
   let {
@@ -40,6 +39,7 @@
     normalizedKeys = undefined,
     nTimePoints,
     lineDisplay,
+    plot,
   }: {
     model: KineticModelBuilder;
     pamProtocol: PamGroup[];
@@ -53,6 +53,7 @@
     normalizedKeys?: string[];
     nTimePoints: number;
     lineDisplay: "current" | "last" | "first";
+    plot?: PlotLayout;
   } = $props();
 
   let loading = $state(true);
@@ -238,8 +239,9 @@
   {#if err}
     <SimErrDisplay err={err} />
   {:else}
-    <LineChart
+    <AnalysisChart
       data={lineData}
+      plot={plot}
       loading={loading}
       yMax={yMax}
       phases={phaseRegions}

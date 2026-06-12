@@ -128,6 +128,7 @@
             nTimePoints={analysis.nTimePoints ?? DEFAULT_N_TIME_POINTS}
             timeoutInSeconds={analysis.timeoutInSeconds ?? DEFAULT_TIMEOUT}
             lineDisplay="last"
+            plot={analysis.plot}
           />
         {:else}
           <TimeCourse
@@ -141,6 +142,7 @@
             nTimePoints={analysis.nTimePoints ?? DEFAULT_N_TIME_POINTS}
             timeoutInSeconds={analysis.timeoutInSeconds ?? DEFAULT_TIMEOUT}
             lineDisplay="last"
+            plot={analysis.plot}
           />
         {/if}
       </div>

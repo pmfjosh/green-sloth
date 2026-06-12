@@ -8,5 +8,14 @@ export const meta: ModelMeta = {
     "Part of Photosynthesis": ["PSII", "CBB Cycle", "ATP Synthase", "FNR"],
     Demonstrations: ["Day Simulation", "FvCB Addon", "Photosynthesis MCA"],
   },
-  analyses: [{ type: "timecourse", tEnd: 100, nTimePoints: 500 }],
+  analyses: [
+    {
+      type: "timecourse",
+      tEnd: 100,
+      nTimePoints: 500,
+      // Ci is ~an order of magnitude larger than the other variables, so it
+      // gets its own subplot; everything else shares the second one.
+      plot: { type: "grid", groups: [["Ci"]] },
+    },
+  ],
 };
