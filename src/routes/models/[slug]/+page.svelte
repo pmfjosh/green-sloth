@@ -3,6 +3,8 @@
   import ModelTables from "$lib/ModelTables.svelte";
   import {
     Bold,
+    ButtonMenu,
+    ButtonMenuItem,
     Code,
     Figure,
     H1,
@@ -28,7 +30,10 @@
     Tr,
     Ul,
   } from "@computational-biology-aachen/design";
-  import type { KineticModelBuilder } from "@computational-biology-aachen/mxlweb-core";
+  import Icon from "@computational-biology-aachen/design/Icon.svelte";
+  import Row from "@computational-biology-aachen/design/Row.svelte";
+  import { KineticModelBuilder } from "@computational-biology-aachen/mxlweb-core";
+  import { modelToSbml } from "@computational-biology-aachen/mxlweb-core/sbml";
   import Markdown, { type Plugin } from "svelte-exmarkdown";
   import type { PageData } from "./$types";
 
@@ -97,6 +102,44 @@
         citationLoading = false;
       });
   });
+
+  function downloadText(content: string, filename: string, type: string) {
+    const blob = new Blob([content], { type });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function saveModel() {
+    // SBML is a reaction-network format; only kinetic models can be exported.
+    if (!(model instanceof KineticModelBuilder)) return;
+    downloadText(
+      modelToSbml(model, data.slug),
+      `${data.slug.replace(/[^A-Za-z0-9]/g, "_")}.sbml`,
+      "application/xml",
+    );
+  }
+
+  function savePython() {
+    if (!(model instanceof KineticModelBuilder)) return;
+    downloadText(
+      model.buildPython([]),
+      `${data.slug.replace(/[^A-Za-z0-9]/g, "_")}.py`,
+      "text/x-python",
+    );
+  }
+
+  function saveMxlpy() {
+    if (!(model instanceof KineticModelBuilder)) return;
+    downloadText(
+      model.buildMxlpy(),
+      `${data.slug.replace(/[^A-Za-z0-9]/g, "_")}.py`,
+      "text/x-python",
+    );
+  }
 </script>
 
 <svelte:head>
@@ -104,7 +147,18 @@
 </svelte:head>
 
 <SectionHeader width="narrow">
-  <H1 color="light">{data.meta.title}</H1>
+  <Row justify="between">
+    <H1 color="light">{data.meta.title}</H1>
+
+    <ButtonMenu variant="inverted">
+      {#snippet label()}
+        <Icon>download</Icon>
+      {/snippet}
+      <ButtonMenuItem onclick={saveModel}>SBML</ButtonMenuItem>
+      <ButtonMenuItem onclick={savePython}>Python</ButtonMenuItem>
+      <ButtonMenuItem onclick={saveMxlpy}>MxlPy</ButtonMenuItem>
+    </ButtonMenu>
+  </Row>
   {#if data.meta.DOI}
     <div class="doi-row">
       <a
