@@ -6,7 +6,6 @@ export const meta: ModelMeta = {
   DOI: "10.1007/s11120-018-0601-1",
   tags: {
     "Part of Photosynthesis": ["PSII", "CBB Cycle", "ATP Synthase", "FNR"],
-    Demonstrations: ["Day Simulation", "FvCB Addon", "Photosynthesis MCA"],
   },
   analyses: [
     {

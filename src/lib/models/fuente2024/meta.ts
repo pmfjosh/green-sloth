@@ -13,12 +13,6 @@ export const meta: ModelMeta = {
       "PSI",
       "ATP Synthase",
     ],
-    Demonstrations: [
-      "Day Simulation",
-      "PAM Simulation",
-      "Photosynthesis MCA",
-      "Fitting of NPQ",
-    ],
   },
   analyses: [
     {

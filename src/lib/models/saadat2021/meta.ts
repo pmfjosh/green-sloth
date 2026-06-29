@@ -16,13 +16,6 @@ export const meta: ModelMeta = {
       "PSI",
       "CBB Cycle",
     ],
-    Demonstrations: [
-      "Day Simulation",
-      "FvCB Addon",
-      "PAM Simulation",
-      "Photosynthesis MCA",
-      "Fitting of NPQ",
-    ],
   },
   analyses: [
     {

@@ -14,7 +14,6 @@ export const meta: ModelMeta = {
       "FNR",
       "PSI",
     ],
-    Demonstrations: [],
   },
   analyses: [
     {

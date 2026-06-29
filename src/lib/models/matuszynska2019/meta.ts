@@ -15,7 +15,6 @@ export const meta: ModelMeta = {
       "PSI",
       "CBB Cycle",
     ],
-    Demonstrations: [],
   },
   analyses: [
     {

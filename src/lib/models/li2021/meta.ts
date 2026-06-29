@@ -16,7 +16,6 @@ export const meta: ModelMeta = {
       "CBB Cycle",
       "OEC",
     ],
-    Demonstrations: ["PAM Simulation", "Fitting of NPQ"],
   },
   analyses: [
     {

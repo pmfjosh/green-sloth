@@ -6,7 +6,6 @@ export const meta: ModelMeta = {
   DOI: "10.3389/fpls.2021.787877",
   tags: {
     "Part of Photosynthesis": ["PSII", "CBB Cycle"],
-    Demonstrations: [],
   },
   analyses: [
     {

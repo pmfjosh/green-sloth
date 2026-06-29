@@ -13,7 +13,6 @@ export const meta: ModelMeta = {
       "PSI",
       "ATP Synthase",
     ],
-    Demonstrations: [],
   },
   analyses: [
     {

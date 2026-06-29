@@ -12,12 +12,6 @@ export const meta: ModelMeta = {
       "Cytochrome b6f",
       "PQ Cycle",
     ],
-    Demonstrations: [
-      "Day Simulation",
-      "PAM Simulation",
-      "Photosynthesis MCA",
-      "Fitting of NPQ",
-    ],
   },
   analyses: [
     {
