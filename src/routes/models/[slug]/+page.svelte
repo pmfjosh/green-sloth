@@ -2,6 +2,7 @@
   import ModelDashboard from "$lib/ModelDashboard.svelte";
   import ModelTables from "$lib/ModelTables.svelte";
   import {
+    Accordion,
     Bold,
     ButtonMenu,
     ButtonMenuItem,
@@ -29,7 +30,6 @@
     Thead,
     Tr,
     Ul,
-    Accordion,
   } from "@computational-biology-aachen/design";
   import Icon from "@computational-biology-aachen/design/Icon.svelte";
   import Row from "@computational-biology-aachen/design/Row.svelte";
@@ -78,26 +78,32 @@
 
   // Eager glob so the KineticModelBuilder is available both at prerender (tables) and
   // on the client (interactive dashboard).
-  const modelPaperFigs = import.meta.glob("$lib/models/*/figs/*.{png,jpg,svg,jpeg}", {
-    eager: true,
-    query: '?url',
-    import: 'default'
-  }) as Record<string, string>;
+  const modelPaperFigs = import.meta.glob(
+    "$lib/models/*/figs/*.{png,jpg,svg,jpeg}",
+    {
+      eager: true,
+      query: "?url",
+      import: "default",
+    },
+  ) as Record<string, string>;
 
   const paperFigures = $derived(
     Object.entries(modelPaperFigs)
       // Filter: Keep only the paths that contain the current model's slug
       .filter(([path]) => path.includes(`/models/${data.slug}/figs/`))
       .map(([path, url]) => {
-        const fileNameWithExt = path.split('/').pop() || '';
-        let cleanTitle = fileNameWithExt.substring(0, fileNameWithExt.lastIndexOf('.'));
-        cleanTitle = cleanTitle.replace(/[-_]/g, ' ');
+        const fileNameWithExt = path.split("/").pop() || "";
+        let cleanTitle = fileNameWithExt.substring(
+          0,
+          fileNameWithExt.lastIndexOf("."),
+        );
+        cleanTitle = cleanTitle.replace(/[-_]/g, " ");
         cleanTitle = cleanTitle.charAt(0).toUpperCase() + cleanTitle.slice(1);
         return {
           src: url,
-          title: cleanTitle
+          title: cleanTitle,
         };
-      })
+      }),
   );
 
   function initFor(slug: string): KineticModelBuilder | null {
@@ -258,52 +264,48 @@
 {/if}
 
 <!-- Curator comment -->
-{#if data.comment || data.changes}
-  <Section
-    variant="surface"
-    width="narrow"
-  >
-    {#if paperFigures.length !== 0}
-      <Accordion title="Validation">
-        <InfoBox
-          header="Please refer to the main publications to directly compare!"
-          variant="warning"
-        ></InfoBox>
-        <InfoBox header="Jupyter Notebook">
-          <Markdown
-            md={`The code to recreate these figures can be seen in [the mxl-model repository](https://github.com/Computational-Biology-Aachen/mxl-models/blob/main/docs/${data.slug}.ipynb)`}
-            plugins={mdPlugins}
-          />
-        </InfoBox>
+<Section
+  variant="surface"
+  width="narrow"
+>
+  {#if data.changes}
+    <InfoBox
+      header="Changes"
+      variant="warning"
+    >
+      <Markdown
+        md={data.changes}
+        plugins={mdPlugins}
+      />
+    </InfoBox>
+  {/if}
+  {#if paperFigures.length !== 0}
+    <InfoBox header="Curator's note">
+      <Text
+        >This model was validated by reproducing the following figures of the <Link
+          href="https://doi.org/{data.meta.DOI}">original publication</Link
+        >.
+      </Text>
+      <Accordion title="Figures">
         {#each paperFigures as fig}
-        <Accordion title={fig.title}>
-          <Image src={fig.src} alt="Page figure"/>
-        </Accordion>
-          
+          <Accordion title={fig.title}>
+            <Image
+              src={fig.src}
+              alt="Page figure"
+            />
+          </Accordion>
         {/each}
       </Accordion>
-    {/if}
-    {#if data.changes}
-      <InfoBox
-        header="Changes"
-        variant="warning"
-      >
-        <Markdown
-          md={data.changes}
-          plugins={mdPlugins}
-        />
-      </InfoBox>
-    {/if}
-    {#if data.comment}
-      <InfoBox header="Curator's note">
-        <Markdown
-          md={data.comment}
-          plugins={mdPlugins}
-        />
-      </InfoBox>
-    {/if}
-  </Section>
-{/if}
+    </InfoBox>
+  {:else}
+    <InfoBox
+      header="Validation fiigures missing"
+      variant="warning"
+    >
+      This model implementation has not been validated yet.</InfoBox
+    >
+  {/if}
+</Section>
 
 <style>
   .doi-row {
