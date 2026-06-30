@@ -35,6 +35,7 @@
   import Row from "@computational-biology-aachen/design/Row.svelte";
   import { KineticModelBuilder } from "@computational-biology-aachen/mxlweb-core";
   import { modelToSbml } from "@computational-biology-aachen/mxlweb-core/sbml";
+  import { error } from "@sveltejs/kit";
   import Markdown, { type Plugin } from "svelte-exmarkdown";
   import type { PageData } from "./$types";
 
@@ -106,11 +107,16 @@
       }),
   );
 
-  function initFor(slug: string): KineticModelBuilder | null {
+  function initFor(slug: string): KineticModelBuilder {
     const key = Object.keys(modelModules).find(
       (p) => p.match(/\/models\/([^/]+)\//)?.[1] === slug,
     );
-    return key ? modelModules[key].initModel() : null;
+    if (key === undefined) {
+      error(404, `Model "${slug}" not found`);
+    }
+    const model = modelModules[key].initModel();
+
+    return model;
   }
 
   const model = $derived(initFor(data.slug));
@@ -171,6 +177,22 @@
       "text/x-python",
     );
   }
+
+  function saveMxlweb() {
+    downloadText(
+      model.buildMxlweb(),
+      `${data.slug.replace(/[^A-Za-z0-9]/g, "_")}.ts`,
+      "text/typescript",
+    );
+  }
+
+  function saveMxlJson() {
+    downloadText(
+      model.buildMxlJson(data.slug),
+      `${data.slug.replace(/[^A-Za-z0-9]/g, "_")}.json`,
+      "text/json",
+    );
+  }
 </script>
 
 <svelte:head>
@@ -185,9 +207,13 @@
       {#snippet label()}
         <Icon>download</Icon>
       {/snippet}
-      <ButtonMenuItem onclick={saveModel}>SBML</ButtonMenuItem>
+      {#if model instanceof KineticModelBuilder}
+        <ButtonMenuItem onclick={saveModel}>SBML</ButtonMenuItem>
+        <ButtonMenuItem onclick={saveMxlpy}>MxlPy</ButtonMenuItem>
+      {/if}
+      <ButtonMenuItem onclick={saveMxlJson}>mxl.json</ButtonMenuItem>
+      <ButtonMenuItem onclick={saveMxlweb}>mxlweb</ButtonMenuItem>
       <ButtonMenuItem onclick={savePython}>Python</ButtonMenuItem>
-      <ButtonMenuItem onclick={saveMxlpy}>MxlPy</ButtonMenuItem>
     </ButtonMenu>
   </Row>
   {#if data.meta.DOI}
