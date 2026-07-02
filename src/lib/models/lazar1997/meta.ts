@@ -8,6 +8,7 @@ export const meta: ModelMeta = {
   tags: {
     "Part of Photosynthesis": ["PSII"],
     "Model type": ["ODE"],
+    "Explains data": ["OJIP transient"],
   },
   analyses: [
     {

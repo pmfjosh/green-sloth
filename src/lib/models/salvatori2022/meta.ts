@@ -8,6 +8,7 @@ export const meta: ModelMeta = {
   tags: {
     "Part of Photosynthesis": ["PSII", "CBB Cycle"],
     "Model type": ["ODE"],
+    "Explains data": [],
   },
   analyses: [
     {

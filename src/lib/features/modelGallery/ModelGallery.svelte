@@ -1,5 +1,6 @@
 <script lang="ts">
   import { base } from "$app/paths";
+  import { page } from "$app/state";
   import { models } from "$lib/models";
   import { fuzzyMatch } from "$lib/utils";
   import {
@@ -9,6 +10,7 @@
     Section,
     SectionHeader,
   } from "@computational-biology-aachen/design";
+  import { onMount } from "svelte";
 
   // Optional per-model scheme image, co-located in src/lib/models/<slug>/.
   const schemeModules = import.meta.glob("$lib/models/*/scheme.svg", {
@@ -36,8 +38,18 @@
   // The apparatus scheme below selects tags in this category.
   const APP_CAT = "Part of Photosynthesis";
 
+  // The `/data` page deep-links here with a preselected tag in this category.
+  const DATA_CAT = "Explains data";
+
   // category → set of active tags
   let active = $state<Record<string, Set<string>>>({});
+
+  // searchParams is off-limits during prerender, so adopt any ?data=<tag>
+  // selection once we're in the browser (used by the /data page buttons).
+  onMount(() => {
+    const tag = page.url.searchParams.get("data");
+    if (tag && categories[DATA_CAT]?.includes(tag)) toggle(DATA_CAT, tag);
+  });
 
   let query = $state("");
   let filterInput = $state<HTMLInputElement>();

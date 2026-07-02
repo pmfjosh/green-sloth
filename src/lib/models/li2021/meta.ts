@@ -18,6 +18,7 @@ export const meta: ModelMeta = {
       "OEC",
     ],
     "Model type": ["ODE"],
+    "Explains data": ["P700 absorbance", "ECS (P515)"],
   },
   analyses: [
     {

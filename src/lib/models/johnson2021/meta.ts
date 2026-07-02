@@ -8,6 +8,7 @@ export const meta: ModelMeta = {
   tags: {
     "Part of Photosynthesis": [],
     "Model type": ["Steady State"],
+    "Explains data": ["Gas exchange"],
   },
   analyses: [
     {

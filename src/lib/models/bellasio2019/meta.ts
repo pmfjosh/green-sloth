@@ -8,6 +8,7 @@ export const meta: ModelMeta = {
   tags: {
     "Part of Photosynthesis": ["PSII", "CBB Cycle", "ATP Synthase", "FNR"],
     "Model type": ["ODE"],
+    "Explains data": ["Gas exchange"],
   },
   analyses: [
     {

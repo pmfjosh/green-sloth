@@ -18,6 +18,7 @@ export const meta: ModelMeta = {
       "CBB Cycle",
     ],
     "Model type": ["ODE"],
+    "Explains data": ["PAM fluorescence", "P700 absorbance"],
   },
   analyses: [
     {

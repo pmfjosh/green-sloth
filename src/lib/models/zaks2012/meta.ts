@@ -15,6 +15,7 @@ export const meta: ModelMeta = {
       "ATP Synthase",
     ],
     "Model type": ["ODE"],
+    "Explains data": ["PAM fluorescence", "P700 absorbance", "ECS (P515)"],
   },
   analyses: [
     {

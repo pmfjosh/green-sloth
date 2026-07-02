@@ -14,6 +14,7 @@ export const meta: ModelMeta = {
       "PQ Cycle",
     ],
     "Model type": ["ODE"],
+    "Explains data": ["PAM fluorescence"],
   },
   analyses: [
     {

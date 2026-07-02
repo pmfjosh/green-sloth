@@ -16,6 +16,7 @@ export const meta: ModelMeta = {
       "PSI",
     ],
     "Model type": ["ODE"],
+    "Explains data": ["PAM fluorescence", "P700 absorbance"],
   },
   analyses: [
     {
