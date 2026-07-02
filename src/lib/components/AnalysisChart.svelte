@@ -12,12 +12,12 @@
     type PhaseRegion,
   } from "@computational-biology-aachen/design";
   import type { ChartData } from "chart.js/auto";
-  import type { PlotLayout } from "./types";
+  import type { PlotLayout } from "../types";
   import {
     partitionByGroups,
     partitionByOrderOfMagnitude,
     type LineDataset,
-  } from "./utils";
+  } from "../utils";
 
   let {
     data,

@@ -1,39 +1,28 @@
 <!--
  @component
- Pulse amplitude modulation (PAM) scan
+ Time course (simulation over time)
 -->
 
 <script lang="ts">
-  import { type PhaseRegion } from "@computational-biology-aachen/design";
   import type { KineticModelBuilder } from "@computational-biology-aachen/mxlweb-core";
-  import {
-    computeNpq,
-    expandProtocol,
-    findPeaks,
-    interpolateAtIndices,
-    normalizeToMax,
-    type PamGroup,
-  } from "@computational-biology-aachen/mxlweb-core/pam";
   import { onMount } from "svelte";
-  import AnalysisChart from "./AnalysisChart.svelte";
-  import SimErrDisplay from "./SimErrDisplay.svelte";
-  import type { Backend } from "./stores/backends";
+  import type { Backend } from "../stores/backends";
   import {
     WorkerManager,
     type SimulationError,
     type SimulationResult,
-  } from "./stores/workerStore";
-  import type { PlotLayout } from "./types";
-  import { arrayColumn } from "./utils";
+  } from "../stores/workerStore";
+  import type { PlotLayout } from "../types";
+  import { arrayColumn } from "../utils";
+  import AnalysisChart from "./AnalysisChart.svelte";
+  import SimErrDisplay from "./SimErrDisplay.svelte";
 
   let {
     model,
-    pamProtocol,
+    tEnd,
     yMax,
     timeoutInSeconds,
     backend,
-    ppfdKey,
-    fluoKey,
     showDerived = false,
     selectedKeys = undefined,
     normalizedKeys = undefined,
@@ -42,12 +31,10 @@
     plot,
   }: {
     model: KineticModelBuilder;
-    pamProtocol: PamGroup[];
+    tEnd: number;
     yMax?: number | undefined;
     timeoutInSeconds: number;
     backend: Backend;
-    ppfdKey: string;
-    fluoKey?: string;
     showDerived?: boolean;
     selectedKeys?: string[];
     normalizedKeys?: string[];
@@ -71,9 +58,11 @@
     const requestId = WorkerManager.generateRequestId();
     currentRequestId = requestId;
 
+    // Clear any existing timeoutInSeconds
     if (timeoutInSecondsId) clearTimeout(timeoutInSecondsId);
     err = undefined;
 
+    // Set a timeoutInSeconds for the request
     timeoutInSecondsId = setTimeout(() => {
       if (currentRequestId === requestId) {
         err = {
@@ -84,8 +73,6 @@
       }
     }, timeoutInSeconds * 1000);
 
-    const protocol = expandProtocol(pamProtocol, ppfdKey);
-
     const order = model.sortDependencies();
     const allDerivedSet = new Set(order);
     const derivedSelection =
@@ -93,49 +80,25 @@
         ? selectedKeys.filter((k) => allDerivedSet.has(k))
         : undefined;
 
-    const req = backend.buildRequest(model, {
-      userParameters: [ppfdKey],
-      derivedSelection,
-    });
+    const req = backend.buildRequest(model, { derivedSelection });
     backend.getPool().postMessage({
       ...req,
       initialValues: model.resolveInitialValues(),
       rhsNames: model.getNames(),
       allDerivedNames: order,
       selectDerivedNames: derivedSelection ?? order,
-      tEnd: 0,
+      tEnd: tEnd,
       requestId: requestId,
-      protocol: protocol,
       calculateDerived: showDerived,
       nTimePoints: nTimePoints,
     });
   }
 
-  let maxPFD = $derived(
-    Math.max(0, ...pamProtocol.flatMap((g) => g.steps.map((s) => s.pfd))),
-  );
-
-  function stepColor(pfd: number): string {
-    if (pfd === 0) return "rgba(0,0,0,0.08)";
-    const ratio = maxPFD > 0 ? pfd / maxPFD : 1;
-    const alpha = (0.06 + ratio * 0.24).toFixed(2);
-    return `rgba(255,200,0,${alpha})`;
+  function normalizeToMax(data: number[]): number[] {
+    const max = Math.max(...data);
+    if (max === 0 || !isFinite(max)) return data;
+    return data.map((v) => v / max);
   }
-
-  let phaseRegions = $derived.by(() => {
-    const regions: PhaseRegion[] = [];
-    let t = 0;
-    for (const group of pamProtocol) {
-      for (let i = 0; i < group.repetitions; i++) {
-        for (const step of group.steps) {
-          const end = t + step.duration;
-          regions.push({ start: t, end, color: stepColor(step.pfd) });
-          t = end;
-        }
-      }
-    }
-    return regions;
-  });
 
   function maybeNormalize(key: string, data: number[]): number[] {
     return normalizedKeys?.includes(key) ? normalizeToMax(data) : data;
@@ -177,36 +140,15 @@
       ),
     }));
 
-    const showNpq = !selectedKeys || selectedKeys.includes("NPQ");
-    const fluoIdx = fluoKey !== undefined ? activeDerived.indexOf(fluoKey) : -1;
-
-    let npqDataset: { label: string; data: number[] } | undefined;
-    if (fluoIdx !== -1 && showNpq) {
-      const fluoNorm = normalizeToMax(
-        arrayColumn(result.values, nVars + fluoIdx) as number[],
-      );
-      const peakIndices = findPeaks(fluoNorm, 0.2);
-      const npqValues = interpolateAtIndices(
-        peakIndices,
-        computeNpq(fluoNorm, peakIndices),
-        fluoNorm.length,
-        "akima",
-      );
-      npqDataset = { label: "NPQ", data: npqValues };
-    }
-
     return {
       labels: result.time as number[],
-      datasets: [
-        ...varDatasets,
-        ...derivedDatasets,
-        ...(npqDataset ? [npqDataset] : []),
-      ],
+      datasets: [...varDatasets, ...derivedDatasets],
     };
   });
 
   function handleResults(data: SimulationResult) {
     if (data.requestId === currentRequestId) {
+      // Clear the timeoutInSeconds since we got a response
       if (timeoutInSecondsId) {
         clearTimeout(timeoutInSecondsId);
         timeoutInSecondsId = null;
@@ -244,7 +186,6 @@
       plot={plot}
       loading={loading}
       yMax={yMax}
-      phases={phaseRegions}
       lineDisplay={lineDisplay}
     />
   {/if}
