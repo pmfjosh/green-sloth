@@ -36,6 +36,7 @@ export function initModel(): KineticModelBuilder {
     })
     .addParameter("pH", { displayName: names.ph, value: 7.9, texName: "pH" })
     .addParameter("CO2_dissolved", {
+      displayName: names.co2,
       value: 0.2,
       texName: "CO2 (dissolved)",
       slider: {
@@ -215,18 +216,22 @@ export function initModel(): KineticModelBuilder {
       texName: "kcat\\_b6f",
     })
     .addParameter("kh_lhc_protonation", {
+      displayName: names.kh_lhc_protonation,
       value: 3.0,
       texName: "kh\\_lhc\\_protonation",
     })
     .addParameter("kf_lhc_protonation", {
+      displayName: names.kf_lhc_protonation,
       value: 0.0096,
       texName: "kf\\_lhc\\_protonation",
     })
     .addParameter("ksat_lhc_protonation", {
+      displayName: names.ksat_lhc_protonation,
       value: 5.8,
       texName: "ksat\\_lhc\\_protonation",
     })
     .addParameter("kf_lhc_deprotonation", {
+      displayName: names.kf_lhc_deprotonation,
       value: 0.0096,
       texName: "kf\\_lhc\\_deprotonation",
     })
@@ -241,18 +246,22 @@ export function initModel(): KineticModelBuilder {
       },
     })
     .addParameter("kf_violaxanthin_deepoxidase", {
+      displayName: names.kf_violaxanthin_deepoxidase,
       value: 0.0024,
       texName: "kf\\_violaxanthin\\_deepoxidase",
     })
     .addParameter("kh_violaxanthin_deepoxidase", {
+      displayName: names.kh_violaxanthin_deepoxidase,
       value: 5.0,
       texName: "kh\\_violaxanthin\\_deepoxidase",
     })
     .addParameter("ksat_violaxanthin_deepoxidase", {
+      displayName: names.ksat_violaxanthin_deepoxidase,
       value: 5.8,
       texName: "ksat\\_violaxanthin\\_deepoxidase",
     })
     .addParameter("kf_zeaxanthin_epoxidase", {
+      displayName: names.kf_zeaxanthin_epoxidase,
       value: 0.00024,
       texName: "kf\\_zeaxanthin\\_epoxidase",
     })
@@ -570,10 +579,12 @@ export function initModel(): KineticModelBuilder {
       texName: "ki\\_phosphoribulokinase\\_Orthophosphate",
     })
     .addParameter("ki_phosphoribulokinase_4", {
+      displayName: names.ki_phosphoribulokinase_4,
       value: 2.5,
       texName: "ki\\_phosphoribulokinase\\_4",
     })
     .addParameter("ki_phosphoribulokinase_5", {
+      displayName: names.ki_phosphoribulokinase_5,
       value: 0.4,
       texName: "ki\\_phosphoribulokinase\\_5",
     })
@@ -602,14 +613,17 @@ export function initModel(): KineticModelBuilder {
       texName: "Orthophosphate (external)",
     })
     .addParameter("km_ex_pga", {
+      displayName: names.km_ex_pga,
       value: 0.25,
       texName: "km\\_ex\\_pga",
     })
     .addParameter("km_ex_gap", {
+      displayName: names.km_ex_gap,
       value: 0.075,
       texName: "km\\_ex\\_gap",
     })
     .addParameter("km_ex_dhap", {
+      displayName: names.km_ex_dhap,
       value: 0.077,
       texName: "km\\_ex\\_dhap",
     })
@@ -622,10 +636,12 @@ export function initModel(): KineticModelBuilder {
       texName: "km\\_N\\_translocator\\_Orthophosphate",
     })
     .addParameter("kcat_N_translocator", {
+      displayName: names.kcat_n_translocator,
       value: 2.0,
       texName: "kcat\\_N\\_translocator",
     })
     .addParameter("E0_N_translocator", {
+      displayName: names.e0_n_translocator,
       value: 1.0,
       texName: "E0\\_N\\_translocator",
     })
@@ -1113,6 +1129,7 @@ export function initModel(): KineticModelBuilder {
       texName: "vmax\\_phosphoribulokinase",
     })
     .addAssignment("vmax_ex_pga", {
+      displayName: names.vmax_ex_pga,
       fn: new Mul([
         new Name("E0_N_translocator"),
         new Name("kcat_N_translocator"),
@@ -1120,6 +1137,7 @@ export function initModel(): KineticModelBuilder {
       texName: "vmax\\_ex\\_pga",
     })
     .addAssignment("N_translocator", {
+      displayName: names.n_translocator,
       fn: new Add([
         new Num(1.0),
         new Mul([
@@ -1205,6 +1223,7 @@ export function initModel(): KineticModelBuilder {
       texName: "b6f",
     })
     .addReaction("lhc_protonation", {
+      displayName: names.r_lhc_protonation,
       fn: new Divide([
         new Mul([
           new Name("PsbS_de_minus_protonated"),
@@ -1231,6 +1250,7 @@ export function initModel(): KineticModelBuilder {
       texName: "lhc\\_protonation",
     })
     .addReaction("lhc_deprotonation", {
+      displayName: names.r_lhc_deprotonation,
       fn: new Mul([
         new Name("PsbS_protonated"),
         new Name("kf_lhc_deprotonation"),
@@ -1254,6 +1274,7 @@ export function initModel(): KineticModelBuilder {
       texName: "cyclic\\_electron\\_flow",
     })
     .addReaction("violaxanthin_deepoxidase", {
+      displayName: names.r_violaxanthin_deepoxidase,
       fn: new Divide([
         new Mul([
           new Name("Violaxanthin"),
@@ -1284,6 +1305,7 @@ export function initModel(): KineticModelBuilder {
       texName: "violaxanthin\\_deepoxidase",
     })
     .addReaction("zeaxanthin_epoxidase", {
+      displayName: names.r_zeaxanthin_epoxidase,
       fn: new Mul([
         new Name("Zeaxanthin"),
         new Name("kf_zeaxanthin_epoxidase"),
@@ -1867,6 +1889,7 @@ export function initModel(): KineticModelBuilder {
       texName: "phosphoglucomutase",
     })
     .addReaction("ex_pga", {
+      displayName: names.r_ex_pga,
       fn: new Divide([
         new Mul([new Name("_3PGA"), new Name("vmax_ex_pga")]),
         new Mul([new Name("N_translocator"), new Name("km_ex_pga")]),
@@ -1875,6 +1898,7 @@ export function initModel(): KineticModelBuilder {
       texName: "ex\\_pga",
     })
     .addReaction("ex_gap", {
+      displayName: names.r_ex_gap,
       fn: new Divide([
         new Mul([new Name("GAP"), new Name("vmax_ex_pga")]),
         new Mul([new Name("N_translocator"), new Name("km_ex_gap")]),
@@ -1883,6 +1907,7 @@ export function initModel(): KineticModelBuilder {
       texName: "ex\\_gap",
     })
     .addReaction("ex_dhap", {
+      displayName: names.r_ex_dhap,
       fn: new Divide([
         new Mul([new Name("DHAP"), new Name("vmax_ex_pga")]),
         new Mul([new Name("N_translocator"), new Name("km_ex_dhap")]),

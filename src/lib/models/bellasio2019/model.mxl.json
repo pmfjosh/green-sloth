@@ -3769,6 +3769,7 @@
             }
           ]
         },
+        "displayName": "PhiPSII",
         "texName": "PhiPSII"
       },
       "J2": {
@@ -4148,6 +4149,7 @@
             }
           ]
         },
+        "displayName": "A",
         "texName": "A"
       }
     },

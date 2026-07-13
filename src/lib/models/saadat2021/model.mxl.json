@@ -185,6 +185,7 @@
           "type": "Num",
           "value": 0.9667381262477079
         },
+        "displayName": "psbs_de",
         "texName": "psbs\\_de"
       },
       "vx": {
@@ -258,6 +259,7 @@
           "type": "Num",
           "value": 0.2
         },
+        "displayName": "CO2",
         "texName": "CO2 (dissolved)"
       },
       "O2_lumen": {
@@ -600,6 +602,7 @@
           "type": "Num",
           "value": 3
         },
+        "displayName": "kh_lhc_protonation",
         "texName": "kh\\_lhc\\_protonation"
       },
       "kf_lhc_protonation": {
@@ -607,6 +610,7 @@
           "type": "Num",
           "value": 0.0096
         },
+        "displayName": "kf_lhc_protonation",
         "texName": "kf\\_lhc\\_protonation"
       },
       "ksat_lhc_protonation": {
@@ -614,6 +618,7 @@
           "type": "Num",
           "value": 5.8
         },
+        "displayName": "ksat_lhc_protonation",
         "texName": "ksat\\_lhc\\_protonation"
       },
       "kf_lhc_deprotonation": {
@@ -621,6 +626,7 @@
           "type": "Num",
           "value": 0.0096
         },
+        "displayName": "kf_lhc_deprotonation",
         "texName": "kf\\_lhc\\_deprotonation"
       },
       "kf_cyclic_electron_flow": {
@@ -636,6 +642,7 @@
           "type": "Num",
           "value": 0.0024
         },
+        "displayName": "kf_violaxanthin_deepoxidase",
         "texName": "kf\\_violaxanthin\\_deepoxidase"
       },
       "kh_violaxanthin_deepoxidase": {
@@ -643,6 +650,7 @@
           "type": "Num",
           "value": 5
         },
+        "displayName": "kh_violaxanthin_deepoxidase",
         "texName": "kh\\_violaxanthin\\_deepoxidase"
       },
       "ksat_violaxanthin_deepoxidase": {
@@ -650,6 +658,7 @@
           "type": "Num",
           "value": 5.8
         },
+        "displayName": "ksat_violaxanthin_deepoxidase",
         "texName": "ksat\\_violaxanthin\\_deepoxidase"
       },
       "kf_zeaxanthin_epoxidase": {
@@ -657,6 +666,7 @@
           "type": "Num",
           "value": 0.00024
         },
+        "displayName": "kf_zeaxanthin_epoxidase",
         "texName": "kf\\_zeaxanthin\\_epoxidase"
       },
       "km_fnr_fd_red": {
@@ -1192,6 +1202,7 @@
           "type": "Num",
           "value": 2.5
         },
+        "displayName": "ki_phosphoribulokinase_4",
         "texName": "ki\\_phosphoribulokinase\\_4"
       },
       "ki_phosphoribulokinase_5": {
@@ -1199,6 +1210,7 @@
           "type": "Num",
           "value": 0.4
         },
+        "displayName": "ki_phosphoribulokinase_5",
         "texName": "ki\\_phosphoribulokinase\\_5"
       },
       "kre_g6pi": {
@@ -1245,6 +1257,7 @@
           "type": "Num",
           "value": 0.25
         },
+        "displayName": "km_ex_pga",
         "texName": "km\\_ex\\_pga"
       },
       "km_ex_gap": {
@@ -1252,6 +1265,7 @@
           "type": "Num",
           "value": 0.075
         },
+        "displayName": "km_ex_gap",
         "texName": "km\\_ex\\_gap"
       },
       "km_ex_dhap": {
@@ -1259,6 +1273,7 @@
           "type": "Num",
           "value": 0.077
         },
+        "displayName": "km_ex_dhap",
         "texName": "km\\_ex\\_dhap"
       },
       "km_N_translocator_pi_ext": {
@@ -1280,6 +1295,7 @@
           "type": "Num",
           "value": 2
         },
+        "displayName": "kcat_N_translocator",
         "texName": "kcat\\_N\\_translocator"
       },
       "E0_N_translocator": {
@@ -1287,6 +1303,7 @@
           "type": "Num",
           "value": 1
         },
+        "displayName": "E0_N_translocator",
         "texName": "E0\\_N\\_translocator"
       },
       "E0_ex_g1p": {
@@ -1887,6 +1904,7 @@
             "value": -1
           }
         },
+        "displayName": "LHC protonation",
         "texName": "lhc\\_protonation"
       },
       "lhc_deprotonation": {
@@ -1909,6 +1927,7 @@
             "value": 1
           }
         },
+        "displayName": "LHC deprotonation",
         "texName": "lhc\\_deprotonation"
       },
       "cyclic_electron_flow": {
@@ -2033,6 +2052,7 @@
             "value": -1
           }
         },
+        "displayName": "violaxanthin deepoxidase",
         "texName": "violaxanthin\\_deepoxidase"
       },
       "zeaxanthin_epoxidase": {
@@ -2055,6 +2075,7 @@
             "value": 1
           }
         },
+        "displayName": "zeaxanthin epoxidase",
         "texName": "zeaxanthin\\_epoxidase"
       },
       "fnr": {
@@ -3941,6 +3962,7 @@
             "value": -1
           }
         },
+        "displayName": "PGA export",
         "texName": "ex\\_pga"
       },
       "ex_gap": {
@@ -3981,6 +4003,7 @@
             "value": -1
           }
         },
+        "displayName": "GAP export",
         "texName": "ex\\_gap"
       },
       "ex_dhap": {
@@ -4021,6 +4044,7 @@
             "value": -1
           }
         },
+        "displayName": "DHAP export",
         "texName": "ex\\_dhap"
       },
       "ex_g1p": {
@@ -4932,6 +4956,7 @@
             }
           ]
         },
+        "displayName": "psbs_pr",
         "texName": "psbs\\_pr"
       },
       "lhc_prot": {
@@ -6103,6 +6128,7 @@
             }
           ]
         },
+        "displayName": "vmax_ex_pga",
         "texName": "vmax\\_ex\\_pga"
       },
       "N_translocator": {
@@ -6199,6 +6225,7 @@
             }
           ]
         },
+        "displayName": "N_translocator",
         "texName": "N\\_translocator"
       },
       "E0_ex_g1p_active": {

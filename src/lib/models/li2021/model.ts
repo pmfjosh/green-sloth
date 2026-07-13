@@ -843,6 +843,7 @@ export function initModel(): KineticModelBuilder {
       texName: "v\\_ClCe",
     })
     .addReaction("v_Leak", {
+      displayName: names.r_proton_leak,
       fn: new Mul([new Name("H_lumen"), new Name("k_leak"), new Name("pmf")]),
       stoichiometry: [
         {

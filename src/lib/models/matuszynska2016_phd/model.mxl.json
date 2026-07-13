@@ -57,6 +57,7 @@
           "type": "Num",
           "value": 0.5000000001374878
         },
+        "displayName": "psbs_de",
         "texName": "psbs\\_de"
       },
       "vx": {
@@ -358,6 +359,7 @@
           "type": "Num",
           "value": 3
         },
+        "displayName": "kh_lhc_protonation",
         "texName": "kh\\_lhc\\_protonation"
       },
       "kf_lhc_protonation": {
@@ -365,6 +367,7 @@
           "type": "Num",
           "value": 0.0096
         },
+        "displayName": "kf_lhc_protonation",
         "texName": "kf\\_lhc\\_protonation"
       },
       "ksat_lhc_protonation": {
@@ -372,6 +375,7 @@
           "type": "Num",
           "value": 5.8
         },
+        "displayName": "ksat_lhc_protonation",
         "texName": "ksat\\_lhc\\_protonation"
       },
       "kf_lhc_deprotonation": {
@@ -379,6 +383,7 @@
           "type": "Num",
           "value": 0.0096
         },
+        "displayName": "kf_lhc_deprotonation",
         "texName": "kf\\_lhc\\_deprotonation"
       },
       "kf_cyclic_electron_flow": {
@@ -394,6 +399,7 @@
           "type": "Num",
           "value": 0.0024
         },
+        "displayName": "kf_violaxanthin_deepoxidase",
         "texName": "kf\\_violaxanthin\\_deepoxidase"
       },
       "kh_violaxanthin_deepoxidase": {
@@ -401,6 +407,7 @@
           "type": "Num",
           "value": 5
         },
+        "displayName": "kh_violaxanthin_deepoxidase",
         "texName": "kh\\_violaxanthin\\_deepoxidase"
       },
       "ksat_violaxanthin_deepoxidase": {
@@ -408,6 +415,7 @@
           "type": "Num",
           "value": 5.8
         },
+        "displayName": "ksat_violaxanthin_deepoxidase",
         "texName": "ksat\\_violaxanthin\\_deepoxidase"
       },
       "kf_zeaxanthin_epoxidase": {
@@ -415,6 +423,7 @@
           "type": "Num",
           "value": 0.00024
         },
+        "displayName": "kf_zeaxanthin_epoxidase",
         "texName": "kf\\_zeaxanthin\\_epoxidase"
       },
       "E0_fnr": {
@@ -872,6 +881,7 @@
             "value": -1
           }
         },
+        "displayName": "LHC protonation",
         "texName": "lhc\\_protonation"
       },
       "lhc_deprotonation": {
@@ -894,6 +904,7 @@
             "value": 1
           }
         },
+        "displayName": "LHC deprotonation",
         "texName": "lhc\\_deprotonation"
       },
       "cyclic_electron_flow": {
@@ -1018,6 +1029,7 @@
             "value": -1
           }
         },
+        "displayName": "violaxanthin deepoxidase",
         "texName": "violaxanthin\\_deepoxidase"
       },
       "zeaxanthin_epoxidase": {
@@ -1040,6 +1052,7 @@
             "value": 1
           }
         },
+        "displayName": "zeaxanthin epoxidase",
         "texName": "zeaxanthin\\_epoxidase"
       },
       "fnr": {
@@ -1836,6 +1849,7 @@
             }
           ]
         },
+        "displayName": "psbs_pr",
         "texName": "psbs\\_pr"
       },
       "lhc_prot": {

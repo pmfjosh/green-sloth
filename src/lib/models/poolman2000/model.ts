@@ -12,6 +12,7 @@ import {
 export function initModel(): KineticModelBuilder {
   return new KineticModelBuilder()
     .addParameter("CO2_dissolved", {
+      displayName: names.co2,
       value: 0.2,
       texName: "CO2 (dissolved)",
     })
@@ -260,10 +261,12 @@ export function initModel(): KineticModelBuilder {
       texName: "ki\\_phosphoribulokinase\\_Orthophosphate",
     })
     .addParameter("ki_phosphoribulokinase_4", {
+      displayName: names.ki_phosphoribulokinase_4,
       value: 2.5,
       texName: "ki\\_phosphoribulokinase\\_4",
     })
     .addParameter("ki_phosphoribulokinase_5", {
+      displayName: names.ki_phosphoribulokinase_5,
       value: 0.4,
       texName: "ki\\_phosphoribulokinase\\_5",
     })
@@ -292,14 +295,17 @@ export function initModel(): KineticModelBuilder {
       texName: "Orthophosphate (external)",
     })
     .addParameter("km_ex_pga", {
+      displayName: names.km_ex_pga,
       value: 0.25,
       texName: "km\\_ex\\_pga",
     })
     .addParameter("km_ex_gap", {
+      displayName: names.km_ex_gap,
       value: 0.075,
       texName: "km\\_ex\\_gap",
     })
     .addParameter("km_ex_dhap", {
+      displayName: names.km_ex_dhap,
       value: 0.077,
       texName: "km\\_ex\\_dhap",
     })
@@ -312,10 +318,12 @@ export function initModel(): KineticModelBuilder {
       texName: "km\\_N\\_translocator\\_Orthophosphate",
     })
     .addParameter("kcat_N_translocator", {
+      displayName: names.kcat_n_translocator,
       value: 2.0,
       texName: "kcat\\_N\\_translocator",
     })
     .addParameter("E0_N_translocator", {
+      displayName: names.e0_n_translocator,
       value: 1.0,
       texName: "E0\\_N\\_translocator",
     })
@@ -514,6 +522,7 @@ export function initModel(): KineticModelBuilder {
       texName: "vmax\\_phosphoribulokinase",
     })
     .addAssignment("vmax_ex_pga", {
+      displayName: names.vmax_ex_pga,
       fn: new Mul([
         new Name("E0_N_translocator"),
         new Name("kcat_N_translocator"),
@@ -521,6 +530,7 @@ export function initModel(): KineticModelBuilder {
       texName: "vmax\\_ex\\_pga",
     })
     .addAssignment("N_translocator", {
+      displayName: names.n_translocator,
       fn: new Add([
         new Num(1.0),
         new Mul([
@@ -931,6 +941,7 @@ export function initModel(): KineticModelBuilder {
       texName: "phosphoglucomutase",
     })
     .addReaction("ex_pga", {
+      displayName: names.r_ex_pga,
       fn: new Divide([
         new Mul([new Name("_3PGA"), new Name("vmax_ex_pga")]),
         new Mul([new Name("N_translocator"), new Name("km_ex_pga")]),
@@ -939,6 +950,7 @@ export function initModel(): KineticModelBuilder {
       texName: "ex\\_pga",
     })
     .addReaction("ex_gap", {
+      displayName: names.r_ex_gap,
       fn: new Divide([
         new Mul([new Name("GAP"), new Name("vmax_ex_pga")]),
         new Mul([new Name("N_translocator"), new Name("km_ex_gap")]),
@@ -947,6 +959,7 @@ export function initModel(): KineticModelBuilder {
       texName: "ex\\_gap",
     })
     .addReaction("ex_dhap", {
+      displayName: names.r_ex_dhap,
       fn: new Divide([
         new Mul([new Name("DHAP"), new Name("vmax_ex_pga")]),
         new Mul([new Name("N_translocator"), new Name("km_ex_dhap")]),

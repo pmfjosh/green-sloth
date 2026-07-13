@@ -127,6 +127,7 @@ export function initModel(): KineticModelBuilder {
       texName: "ETR",
     })
     .addAssignment("A", {
+      displayName: names.net_assimilation_rate,
       fn: new Mul([new Name("NADPH"), new Name("R"), new Name("v_C")]),
       texName: "A",
     })

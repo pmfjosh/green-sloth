@@ -148,6 +148,7 @@
           "type": "Num",
           "value": 1
         },
+        "displayName": "QA",
         "texName": "QAox"
       },
       "QBneut": {
@@ -2234,6 +2235,7 @@
             ]
           }
         },
+        "displayName": "proton leak",
         "texName": "vleak"
       },
       "atps_activate": {
@@ -2806,6 +2808,7 @@
             }
           ]
         },
+        "displayName": "delta_pH",
         "texName": "deltapH"
       },
       "pmf": {
@@ -2835,6 +2838,7 @@
             }
           ]
         },
+        "displayName": "pmf",
         "texName": "pmf"
       },
       "deltamuCl": {
@@ -3355,6 +3359,7 @@
             }
           ]
         },
+        "displayName": "QA_red",
         "texName": "QAred"
       },
       "Pheneut": {

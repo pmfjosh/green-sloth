@@ -195,18 +195,22 @@ export function initModel(): KineticModelBuilder {
       texName: "kcat\\_b6f",
     })
     .addParameter("kh_lhc_protonation", {
+      displayName: names.kh_lhc_protonation,
       value: 3.0,
       texName: "kh\\_lhc\\_protonation",
     })
     .addParameter("kf_lhc_protonation", {
+      displayName: names.kf_lhc_protonation,
       value: 0.0096,
       texName: "kf\\_lhc\\_protonation",
     })
     .addParameter("ksat_lhc_protonation", {
+      displayName: names.ksat_lhc_protonation,
       value: 5.8,
       texName: "ksat\\_lhc\\_protonation",
     })
     .addParameter("kf_lhc_deprotonation", {
+      displayName: names.kf_lhc_deprotonation,
       value: 0.0096,
       texName: "kf\\_lhc\\_deprotonation",
     })
@@ -216,18 +220,22 @@ export function initModel(): KineticModelBuilder {
       texName: "kf\\_cyclic\\_electron\\_flow",
     })
     .addParameter("kf_violaxanthin_deepoxidase", {
+      displayName: names.kf_violaxanthin_deepoxidase,
       value: 0.0024,
       texName: "kf\\_violaxanthin\\_deepoxidase",
     })
     .addParameter("kh_violaxanthin_deepoxidase", {
+      displayName: names.kh_violaxanthin_deepoxidase,
       value: 5.0,
       texName: "kh\\_violaxanthin\\_deepoxidase",
     })
     .addParameter("ksat_violaxanthin_deepoxidase", {
+      displayName: names.ksat_violaxanthin_deepoxidase,
       value: 5.8,
       texName: "ksat\\_violaxanthin\\_deepoxidase",
     })
     .addParameter("kf_zeaxanthin_epoxidase", {
+      displayName: names.kf_zeaxanthin_epoxidase,
       value: 0.00024,
       texName: "kf\\_zeaxanthin\\_epoxidase",
     })
@@ -359,6 +367,7 @@ export function initModel(): KineticModelBuilder {
     })
     .addVariable("lhc", { value: 0.5105293511676007, texName: "lhc" })
     .addVariable("psbs_de", {
+      displayName: names.psbs_deepoxidized,
       value: 0.5000000001374878,
       texName: "psbs\\_de",
     })
@@ -413,6 +422,7 @@ export function initModel(): KineticModelBuilder {
       texName: "pc\\_red",
     })
     .addAssignment("psbs_pr", {
+      displayName: names.psbs_protonated,
       fn: new Add([new Name("PSBS_tot"), new Minus([new Name("psbs_de")])]),
       texName: "psbs\\_pr",
     })
@@ -1675,6 +1685,7 @@ export function initModel(): KineticModelBuilder {
       texName: "b6f",
     })
     .addReaction("lhc_protonation", {
+      displayName: names.r_lhc_protonation,
       fn: new Divide([
         new Mul([
           new Name("kf_lhc_protonation"),
@@ -1699,6 +1710,7 @@ export function initModel(): KineticModelBuilder {
       texName: "lhc\\_protonation",
     })
     .addReaction("lhc_deprotonation", {
+      displayName: names.r_lhc_deprotonation,
       fn: new Mul([new Name("kf_lhc_deprotonation"), new Name("psbs_pr")]),
       stoichiometry: [{ name: "psbs_de", value: new Num(1.0) }],
       texName: "lhc\\_deprotonation",
@@ -1717,6 +1729,7 @@ export function initModel(): KineticModelBuilder {
       texName: "cyclic\\_electron\\_flow",
     })
     .addReaction("violaxanthin_deepoxidase", {
+      displayName: names.r_violaxanthin_deepoxidase,
       fn: new Divide([
         new Mul([
           new Name("kf_violaxanthin_deepoxidase"),
@@ -1747,6 +1760,7 @@ export function initModel(): KineticModelBuilder {
       texName: "violaxanthin\\_deepoxidase",
     })
     .addReaction("zeaxanthin_epoxidase", {
+      displayName: names.r_zeaxanthin_epoxidase,
       fn: new Mul([new Name("kf_zeaxanthin_epoxidase"), new Name("zx")]),
       stoichiometry: [{ name: "vx", value: new Num(1.0) }],
       texName: "zeaxanthin\\_epoxidase",

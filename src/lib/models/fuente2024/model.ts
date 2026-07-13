@@ -93,6 +93,7 @@ export function initModel(): KineticModelBuilder {
     })
     .addParameter("bH", { displayName: names.b_h, value: 0.01, texName: "bH" })
     .addParameter("NPQ_max", {
+      displayName: names.npq_max,
       value: 0.6,
       texName: "NPQ\\_max",
     })
@@ -393,6 +394,7 @@ export function initModel(): KineticModelBuilder {
       texName: "v\\_ATPcons",
     })
     .addReaction("v_Leak", {
+      displayName: names.r_proton_leak,
       fn: new Mul([
         new Name("k7"),
         new Add([new Name("H_lumen"), new Minus([new Name("H_stroma")])]),

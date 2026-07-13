@@ -41,6 +41,7 @@
           "type": "Num",
           "value": 1
         },
+        "displayName": "psbs_de",
         "texName": "psbs\\_de"
       },
       "vx": {
@@ -415,6 +416,7 @@
             ]
           }
         },
+        "displayName": "PSII",
         "texName": "v\\_PSII"
       },
       "v_PQ": {
@@ -1492,6 +1494,7 @@
             }
           ]
         },
+        "displayName": "psbs_pr",
         "texName": "psbs\\_pr"
       },
       "zx": {

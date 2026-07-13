@@ -648,6 +648,7 @@ export function initModel(): KineticModelBuilder {
       texName: "I2",
     })
     .addAssignment("PhiPSII", {
+      displayName: names.phipsii,
       fn: new Divide([
         new Mul([
           new Name("PhiPSII_LL"),
@@ -803,6 +804,7 @@ export function initModel(): KineticModelBuilder {
       texName: "gs\\_steady",
     })
     .addAssignment("A", {
+      displayName: names.net_assimilation_rate,
       fn: new Add([
         new Name("v_RuBisCO_c"),
         new Minus([new Name("RLight")]),

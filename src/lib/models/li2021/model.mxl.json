@@ -1950,6 +1950,7 @@
             ]
           }
         },
+        "displayName": "proton leak",
         "texName": "v\\_Leak"
       },
       "v_pmf_protons_activity": {

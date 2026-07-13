@@ -192,6 +192,7 @@
           "type": "Num",
           "value": 0.6
         },
+        "displayName": "NPQ_max",
         "texName": "NPQ\\_max"
       },
       "cEqP": {
@@ -777,6 +778,7 @@
             "value": -1
           }
         },
+        "displayName": "proton leak",
         "texName": "v\\_Leak"
       },
       "v_PQ": {

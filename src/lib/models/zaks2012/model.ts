@@ -519,10 +519,7 @@ export function initModel(): KineticModelBuilder {
       value: 1e-14,
       texName: "PsbSQ",
     })
-    .addVariable("QAox", {
-      value: 1.0,
-      texName: "QAox",
-    })
+    .addVariable("QAox", { displayName: names.qa, value: 1.0, texName: "QAox" })
     .addVariable("QBneut", {
       value: 1.0,
       texName: "QBneut",
@@ -605,10 +602,12 @@ export function initModel(): KineticModelBuilder {
       texName: "deltapsi",
     })
     .addAssignment("deltapH", {
+      displayName: names.delta_ph,
       fn: new Add([new Name("pH_stroma"), new Minus([new Name("pH_lumen")])]),
       texName: "deltapH",
     })
     .addAssignment("pmf", {
+      displayName: names.pmf,
       fn: new Add([
         new Name("deltapsi"),
         new Mul([
@@ -743,6 +742,7 @@ export function initModel(): KineticModelBuilder {
       texName: "q\\_total",
     })
     .addAssignment("QAred", {
+      displayName: names.qa_red,
       fn: new Mul([
         new Name("fracIntactRC"),
         new Add([new Num(1.0), new Minus([new Name("QAox")])]),
@@ -1227,6 +1227,7 @@ export function initModel(): KineticModelBuilder {
       texName: "atp\\_synthesis",
     })
     .addReaction("vleak", {
+      displayName: names.r_proton_leak,
       fn: new Piecewise([
         new Num(0.0),
         new GreaterEqual([

@@ -185,7 +185,11 @@ export function initModel(): KineticModelBuilder {
       texName: "vmax\\_atp\\_synthase",
     })
     .addVariable("atp", { displayName: names.atp, value: 25.0, texName: "atp" })
-    .addVariable("psbs_de", { value: 1, texName: "psbs\\_de" })
+    .addVariable("psbs_de", {
+      displayName: names.psbs_deepoxidized,
+      value: 1,
+      texName: "psbs\\_de",
+    })
     .addVariable("vx", {
       displayName: names.violaxanthin_fraction,
       value: 1,
@@ -307,6 +311,7 @@ export function initModel(): KineticModelBuilder {
       texName: "adp",
     })
     .addAssignment("psbs_pr", {
+      displayName: names.psbs_protonated,
       fn: new Add([new Name("PsbS_tot"), new Minus([new Name("psbs_de")])]),
       texName: "psbs\\_pr",
     })
@@ -984,6 +989,7 @@ export function initModel(): KineticModelBuilder {
       texName: "ps2states",
     })
     .addReaction("v_PSII", {
+      displayName: names.r_psii,
       fn: new Mul([new Num(0.5), new Name("B1"), new Name("k_P")]),
       stoichiometry: [
         { name: "pq_red", value: new Num(1.0) },
