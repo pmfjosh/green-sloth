@@ -344,6 +344,7 @@
             "value": 1
           }
         },
+        "displayName": "glycine decarboxylase",
         "texName": "glycine\\_decarboxylase"
       },
       "serine_glyoxylate_transaminase": {

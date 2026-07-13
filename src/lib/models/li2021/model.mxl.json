@@ -34,6 +34,7 @@
           "type": "Num",
           "value": 0
         },
+        "displayName": "Dpsi",
         "texName": "Dpsi"
       },
       "K_lu": {
@@ -41,6 +42,7 @@
           "type": "Num",
           "value": 0.1
         },
+        "displayName": "K_lu",
         "texName": "K\\_lu"
       },
       "PC_ox": {
@@ -71,6 +73,7 @@
           "type": "Num",
           "value": 0
         },
+        "displayName": "singO2",
         "texName": "singO2"
       },
       "Fd_red": {
@@ -118,6 +121,7 @@
           "type": "Num",
           "value": 0.33
         },
+        "displayName": "k_recomb",
         "texName": "k\\_recomb"
       },
       "phi_triplet": {
@@ -125,6 +129,7 @@
           "type": "Num",
           "value": 0.45
         },
+        "displayName": "phi_triplet",
         "texName": "phi\\_triplet"
       },
       "phi_1O2": {
@@ -132,6 +137,7 @@
           "type": "Num",
           "value": 1
         },
+        "displayName": "phi_1O2",
         "texName": "phi\\_1O2"
       },
       "sigma0_II": {
@@ -139,6 +145,7 @@
           "type": "Num",
           "value": 0.5
         },
+        "displayName": "sigma0_II",
         "texName": "sigma0\\_II"
       },
       "c_b6f": {
@@ -146,6 +153,7 @@
           "type": "Num",
           "value": 0.433
         },
+        "displayName": "c_b6f",
         "texName": "c\\_b6f"
       },
       "pKa_reg": {
@@ -153,6 +161,7 @@
           "type": "Num",
           "value": 6.2
         },
+        "displayName": "pKa_reg",
         "texName": "pKa\\_reg"
       },
       "Em_PC_pH7": {
@@ -160,6 +169,7 @@
           "type": "Num",
           "value": 0.37
         },
+        "displayName": "Em_PC_pH7",
         "texName": "Em\\_PC\\_pH7"
       },
       "Em_PQH2_pH7": {
@@ -167,6 +177,7 @@
           "type": "Num",
           "value": 0.11
         },
+        "displayName": "Em_PQH2_pH7",
         "texName": "Em\\_PQH2\\_pH7"
       },
       "Vmax_b6f": {
@@ -174,6 +185,7 @@
           "type": "Num",
           "value": 300
         },
+        "displayName": "Vmax_b6f",
         "texName": "Vmax\\_b6f"
       },
       "pKa_PsbS": {
@@ -181,6 +193,7 @@
           "type": "Num",
           "value": 6.2
         },
+        "displayName": "pKa_PsbS",
         "texName": "pKa\\_PsbS"
       },
       "NPQ_max": {
@@ -188,6 +201,7 @@
           "type": "Num",
           "value": 3
         },
+        "displayName": "NPQ_max",
         "texName": "NPQ\\_max"
       },
       "pH_st": {
@@ -231,6 +245,7 @@
           "type": "Num",
           "value": 1000
         },
+        "displayName": "k_QA",
         "texName": "k\\_QA"
       },
       "Keq_QA": {
@@ -238,6 +253,7 @@
           "type": "Num",
           "value": 200
         },
+        "displayName": "Keq_QA",
         "texName": "Keq\\_QA"
       },
       "k_PCtoP700": {
@@ -245,6 +261,7 @@
           "type": "Num",
           "value": 5000
         },
+        "displayName": "k_PCtoP700",
         "texName": "k\\_PCtoP700"
       },
       "k_FdtoNADP": {
@@ -252,6 +269,7 @@
           "type": "Num",
           "value": 1000
         },
+        "displayName": "k_FdtoNADP",
         "texName": "k\\_FdtoNADP"
       },
       "K_st": {
@@ -259,6 +277,7 @@
           "type": "Num",
           "value": 0.1
         },
+        "displayName": "K_st",
         "texName": "K\\_st"
       },
       "k_KEA3": {
@@ -266,6 +285,7 @@
           "type": "Num",
           "value": 2500000
         },
+        "displayName": "k_KEA3",
         "texName": "k\\_KEA3"
       },
       "P_K": {
@@ -273,6 +293,7 @@
           "type": "Num",
           "value": 150
         },
+        "displayName": "P_K",
         "texName": "P\\_K"
       },
       "ipt_lu": {
@@ -309,6 +330,7 @@
           "type": "Num",
           "value": 200
         },
+        "displayName": "Vmax_ATPsynth",
         "texName": "Vmax\\_ATPsynth"
       },
       "b_H": {
@@ -331,6 +353,7 @@
           "type": "Num",
           "value": 0.004
         },
+        "displayName": "k_EZ",
         "texName": "k\\_EZ"
       },
       "nh_VDE": {
@@ -338,6 +361,7 @@
           "type": "Num",
           "value": 4
         },
+        "displayName": "nh_VDE",
         "texName": "nh\\_VDE"
       },
       "pKa_VDE": {
@@ -345,6 +369,7 @@
           "type": "Num",
           "value": 5.65
         },
+        "displayName": "pKa_VDE",
         "texName": "pKa\\_VDE"
       },
       "Vmax_VDE": {
@@ -352,6 +377,7 @@
           "type": "Num",
           "value": 0.08
         },
+        "displayName": "Vmax_VDE",
         "texName": "Vmax\\_VDE"
       },
       "k_leak": {
@@ -521,6 +547,7 @@
             ]
           }
         },
+        "displayName": "vPSII_recomb",
         "texName": "vPSII\\_recomb"
       },
       "vPSII_ChSep": {
@@ -569,6 +596,7 @@
             "value": "vpc"
           }
         },
+        "displayName": "vPSII_ChSep",
         "texName": "vPSII\\_ChSep"
       },
       "v_PSII": {
@@ -599,6 +627,7 @@
             "value": 0.5
           }
         },
+        "displayName": "PSII",
         "texName": "v\\_PSII"
       },
       "v_PQ": {
@@ -977,6 +1006,7 @@
             "value": "vpc"
           }
         },
+        "displayName": "cyt b6f",
         "texName": "v\\_b6f"
       },
       "v_NDH": {
@@ -1265,6 +1295,7 @@
             "value": "vpc"
           }
         },
+        "displayName": "PSI_ChSep",
         "texName": "PSI\\_ChSep"
       },
       "v_PSI_PCoxid": {
@@ -1295,6 +1326,7 @@
             "value": 1
           }
         },
+        "displayName": "v_PSI_PCoxid",
         "texName": "v\\_PSI\\_PCoxid"
       },
       "v_FNR": {
@@ -1325,6 +1357,7 @@
             "value": 0.5
           }
         },
+        "displayName": "FNR",
         "texName": "v\\_FNR"
       },
       "v_Mehler": {
@@ -1447,6 +1480,7 @@
             "value": -1
           }
         },
+        "displayName": "v_CBB",
         "texName": "v\\_CBB"
       },
       "v_KEA3": {
@@ -1522,6 +1556,7 @@
             ]
           }
         },
+        "displayName": "v_KEA3",
         "texName": "v\\_KEA3"
       },
       "v_VKC": {
@@ -1622,6 +1657,7 @@
             ]
           }
         },
+        "displayName": "v_VKC",
         "texName": "v\\_VKC"
       },
       "v_VCCN1": {
@@ -2269,6 +2305,7 @@
             "value": -1
           }
         },
+        "displayName": "v_Epox",
         "texName": "v\\_Epox"
       },
       "v_Deepox": {
@@ -2343,6 +2380,7 @@
             "value": 1
           }
         },
+        "displayName": "v_Deepox",
         "texName": "v\\_Deepox"
       }
     },
@@ -2627,6 +2665,7 @@
             }
           ]
         },
+        "displayName": "PsbSP",
         "texName": "PsbSP"
       },
       "NPQ": {
@@ -2743,6 +2782,7 @@
             }
           ]
         },
+        "displayName": "PhiPSII",
         "texName": "PhiPSII"
       },
       "H_lumen": {
@@ -2771,6 +2811,7 @@
             ]
           }
         },
+        "displayName": "protons_lumen",
         "texName": "H\\_lumen"
       },
       "H_st": {
@@ -2799,6 +2840,7 @@
             ]
           }
         },
+        "displayName": "H_stroma",
         "texName": "H\\_st"
       },
       "pmf": {
@@ -2842,6 +2884,7 @@
             }
           ]
         },
+        "displayName": "pmf",
         "texName": "pmf"
       },
       "kCBB": {
@@ -2876,6 +2919,7 @@
             }
           ]
         },
+        "displayName": "k_CBB",
         "texName": "kCBB"
       },
       "delta_pH": {
@@ -2897,6 +2941,7 @@
             }
           ]
         },
+        "displayName": "delta_pH",
         "texName": "delta\\_pH"
       },
       "delta_pH_inVolts": {
@@ -2913,6 +2958,7 @@
             }
           ]
         },
+        "displayName": "delta_pH_inVolts",
         "texName": "delta\\_pH\\_inVolts"
       },
       "qL_act": {

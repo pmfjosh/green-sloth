@@ -194,6 +194,7 @@ export function initModel(): KineticModelBuilder {
       texName: "glycine\\_transaminase",
     })
     .addReaction("glycine_decarboxylase", {
+      displayName: names.r_glycine_decarboxylase,
       fn: new Divide([
         new Mul([new Name("glycine"), new Name("vmax_glycine_decarboxylase")]),
         new Add([new Name("glycine"), new Name("km_glycine_decarboxylase_s")]),
