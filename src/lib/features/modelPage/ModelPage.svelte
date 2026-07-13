@@ -37,6 +37,7 @@
     Ul,
   } from "@computational-biology-aachen/design";
   import Icon from "@computational-biology-aachen/design/Icon.svelte";
+  import Pair from "@computational-biology-aachen/design/Pair.svelte";
   import Row from "@computational-biology-aachen/design/Row.svelte";
   import {
     KineticModelBuilder,
@@ -118,6 +119,9 @@
         };
       }),
   );
+
+  const repo = "https://github.com/Computational-Biology-Aachen/green-sloth";
+  const editUrl = $derived(`${repo}/tree/main/src/lib/models/${data.slug}`);
 
   function initFor(slug: string): ModelBuilderBase {
     const model = buildModel(slug);
@@ -228,23 +232,36 @@
 
 <SectionHeader width="narrow">
   <Row justify="between">
-    <H1 color="light">{data.meta.title}</H1>
+    <div class="hundo">
+      <H1 color="light">{data.meta.title}</H1>
+    </div>
 
-    <ButtonMenu variant="inverted">
-      {#snippet label()}
-        <Icon>download</Icon>
-      {/snippet}
-      {#if model instanceof KineticModelBuilder}
-        <ButtonMenuItem onclick={saveModel}>SBML</ButtonMenuItem>
-        <ButtonMenuItem onclick={saveMxlpy}>MxlPy</ButtonMenuItem>
-      {/if}
-      {#if model instanceof SteadyStateModelBuilder}
-        <ButtonMenuItem onclick={saveMxlpy}>MxlPy</ButtonMenuItem>
-      {/if}
-      <ButtonMenuItem onclick={saveMxlJson}>mxl.json</ButtonMenuItem>
-      <ButtonMenuItem onclick={saveMxlweb}>mxlweb</ButtonMenuItem>
-      <ButtonMenuItem onclick={savePython}>Python</ButtonMenuItem>
-    </ButtonMenu>
+    <Pair justify="end">
+      <a
+        href={editUrl}
+        target="_blank"
+        rel="noreferrer"
+        class="edit-button"
+      >
+        <Icon color="inherit">edit</Icon> Edit
+      </a>
+
+      <ButtonMenu variant="inverted">
+        {#snippet label()}
+          <Icon>download</Icon> Download
+        {/snippet}
+        {#if model instanceof KineticModelBuilder}
+          <ButtonMenuItem onclick={saveModel}>SBML</ButtonMenuItem>
+          <ButtonMenuItem onclick={saveMxlpy}>MxlPy</ButtonMenuItem>
+        {/if}
+        {#if model instanceof SteadyStateModelBuilder}
+          <ButtonMenuItem onclick={saveMxlpy}>MxlPy</ButtonMenuItem>
+        {/if}
+        <ButtonMenuItem onclick={saveMxlJson}>mxl.json</ButtonMenuItem>
+        <ButtonMenuItem onclick={saveMxlweb}>mxlweb</ButtonMenuItem>
+        <ButtonMenuItem onclick={savePython}>Python</ButtonMenuItem>
+      </ButtonMenu>
+    </Pair>
   </Row>
   {#if data.meta.DOI}
     <div class="doi-row">
@@ -390,6 +407,30 @@
 </Section>
 
 <style>
+  .edit-button {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: var(--space-2);
+    transition: var(--transition);
+    box-shadow: var(--shadow-primary);
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface);
+    padding: var(--space-2) var(--space-6);
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    font-family: var(--font-sans);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .edit-button:hover {
+    opacity: 0.85;
+    background-color: var(--color-surface);
+  }
+
   .doi-row {
     display: flex;
     flex-wrap: wrap;
@@ -415,5 +456,9 @@
 
   .citation-badge--loading {
     color: rgba(255, 255, 255, 0.5);
+  }
+
+  .hundo {
+    width: 100%;
   }
 </style>
