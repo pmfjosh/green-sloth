@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Computational-Biology-Aachen/mxl-schemas/main/v1/kinetic-model.schema.json",
   "spec_version": "1.0",
   "kind": "kinetic",
-  "model_id": "matuszynska2016_npq",
+  "model_id": "matuszynska2016",
   "model": {
     "variables": {
       "pq_red": {
