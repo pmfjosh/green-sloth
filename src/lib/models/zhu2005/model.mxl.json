@@ -1,0 +1,6240 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Computational-Biology-Aachen/mxl-schemas/main/v1/kinetic-model.schema.json",
+  "spec_version": "1.0",
+  "kind": "kinetic",
+  "model_id": "zhu2005",
+  "model": {
+    "variables": {
+      "Ap": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "Ap"
+      },
+      "U": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "U"
+      },
+      "P680plus_Pheominus": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "P680plus\\_Pheominus"
+      },
+      "P680plus_Pheo": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "P680plus\\_Pheo"
+      },
+      "P680_Pheominus": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "P680\\_Pheominus"
+      },
+      "S0T": {
+        "value": {
+          "type": "Num",
+          "value": 0.2
+        },
+        "texName": "S0T"
+      },
+      "S1T": {
+        "value": {
+          "type": "Num",
+          "value": 0.8
+        },
+        "texName": "S1T"
+      },
+      "S2T": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "S2T"
+      },
+      "S3T": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "S3T"
+      },
+      "S0Tp": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "S0Tp"
+      },
+      "S1Tp": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "S1Tp"
+      },
+      "S2Tp": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "S2Tp"
+      },
+      "S3Tp": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "S3Tp"
+      },
+      "QA_QB": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "QA\\_QB"
+      },
+      "QAred_QB": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "QAred\\_QB"
+      },
+      "QA_QBred": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "QA\\_QBred"
+      },
+      "QAred_QBred": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "QAred\\_QBred"
+      },
+      "QA_QB2red": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "QA\\_QB2red"
+      },
+      "QAred_QB2red": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "QAred\\_QB2red"
+      },
+      "PQH2": {
+        "value": {
+          "type": "Num",
+          "value": 3
+        },
+        "texName": "PQH2"
+      },
+      "Aip": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "Aip"
+      },
+      "Ui": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "Ui"
+      },
+      "Uifc": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "Uifc"
+      },
+      "P680plus_Pheominus_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "P680plus\\_Pheominus\\_i"
+      },
+      "P680plus_Pheo_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "P680plus\\_Pheo\\_i"
+      },
+      "P680_Pheominus_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "P680\\_Pheominus\\_i"
+      },
+      "S0T_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "S0T\\_i"
+      },
+      "S1T_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "S1T\\_i"
+      },
+      "S2T_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "S2T\\_i"
+      },
+      "S3T_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "S3T\\_i"
+      },
+      "S0Tp_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "S0Tp\\_i"
+      },
+      "S1Tp_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "S1Tp\\_i"
+      },
+      "S2Tp_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "S2Tp\\_i"
+      },
+      "S3Tp_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "S3Tp\\_i"
+      },
+      "QA_QB_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "QA\\_QB\\_i"
+      },
+      "QAred_QB_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "QAred\\_QB\\_i"
+      },
+      "QA_QBred_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "QA\\_QBred\\_i"
+      },
+      "QAred_QBred_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "QAred\\_QBred\\_i"
+      },
+      "QA_QB2red_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "QA\\_QB2red\\_i"
+      },
+      "QAred_QB2red_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "QAred\\_QB2red\\_i"
+      }
+    },
+    "parameters": {
+      "Iin": {
+        "value": {
+          "type": "Num",
+          "value": 3000
+        },
+        "texName": "Iin"
+      },
+      "x": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "x"
+      },
+      "p": {
+        "value": {
+          "type": "Num",
+          "value": 0.5
+        },
+        "texName": "p"
+      },
+      "c_light": {
+        "value": {
+          "type": "Num",
+          "value": 300000000
+        },
+        "texName": "c\\_light"
+      },
+      "h": {
+        "value": {
+          "type": "Num",
+          "value": 6.62e-34
+        },
+        "texName": "h"
+      },
+      "k_boltzmann": {
+        "value": {
+          "type": "Num",
+          "value": 1.38e-23
+        },
+        "texName": "k\\_boltzmann"
+      },
+      "temperature": {
+        "value": {
+          "type": "Num",
+          "value": 298
+        },
+        "texName": "temperature"
+      },
+      "lambda_chl": {
+        "value": {
+          "type": "Num",
+          "value": 6.73e-7
+        },
+        "texName": "lambda\\_chl"
+      },
+      "lambda_p680": {
+        "value": {
+          "type": "Num",
+          "value": 6.8e-7
+        },
+        "texName": "lambda\\_p680"
+      },
+      "n_psi_psii": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "n\\_psi\\_psii"
+      },
+      "n_core_chl": {
+        "value": {
+          "type": "Num",
+          "value": 70
+        },
+        "texName": "n\\_core\\_chl"
+      },
+      "n_nonreducing_peripheral_chl": {
+        "value": {
+          "type": "Num",
+          "value": 220
+        },
+        "texName": "n\\_nonreducing\\_peripheral\\_chl"
+      },
+      "n_nonreducing_core_chl": {
+        "value": {
+          "type": "Num",
+          "value": 35
+        },
+        "texName": "n\\_nonreducing\\_core\\_chl"
+      },
+      "n_nonreducing_detached_chl": {
+        "value": {
+          "type": "Num",
+          "value": 35
+        },
+        "texName": "n\\_nonreducing\\_detached\\_chl"
+      },
+      "P680Pheo_total": {
+        "value": {
+          "type": "Num",
+          "value": 1
+        },
+        "texName": "P680Pheo\\_total"
+      },
+      "PQ_total": {
+        "value": {
+          "type": "Num",
+          "value": 6
+        },
+        "texName": "PQ\\_total"
+      },
+      "k2": {
+        "value": {
+          "type": "Num",
+          "value": 2000000000
+        },
+        "texName": "k2"
+      },
+      "k3": {
+        "value": {
+          "type": "Num",
+          "value": 800
+        },
+        "texName": "k3"
+      },
+      "kr3": {
+        "value": {
+          "type": "Num",
+          "value": 80
+        },
+        "texName": "kr3"
+      },
+      "kAB1": {
+        "value": {
+          "type": "Num",
+          "value": 2500
+        },
+        "texName": "kAB1"
+      },
+      "kAB2": {
+        "value": {
+          "type": "Num",
+          "value": 3300
+        },
+        "texName": "kAB2"
+      },
+      "kBA1": {
+        "value": {
+          "type": "Num",
+          "value": 175
+        },
+        "texName": "kBA1"
+      },
+      "kBA2": {
+        "value": {
+          "type": "Num",
+          "value": 250
+        },
+        "texName": "kBA2"
+      },
+      "kAd": {
+        "value": {
+          "type": "Num",
+          "value": 100000000
+        },
+        "texName": "kAd"
+      },
+      "kAf": {
+        "value": {
+          "type": "Num",
+          "value": 30000000
+        },
+        "texName": "kAf"
+      },
+      "kAU": {
+        "value": {
+          "type": "Num",
+          "value": 10000000000
+        },
+        "texName": "kAU"
+      },
+      "kUA": {
+        "value": {
+          "type": "Num",
+          "value": 10000000000
+        },
+        "texName": "kUA"
+      },
+      "kUd_closed": {
+        "value": {
+          "type": "Num",
+          "value": 100000000
+        },
+        "texName": "kUd\\_closed"
+      },
+      "kUd_open": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "kUd\\_open"
+      },
+      "kUf": {
+        "value": {
+          "type": "Num",
+          "value": 30000000
+        },
+        "texName": "kUf"
+      },
+      "k_c": {
+        "value": {
+          "type": "Num",
+          "value": 1000000000
+        },
+        "texName": "k\\_c"
+      },
+      "kminus1_closed": {
+        "value": {
+          "type": "Num",
+          "value": 900000000
+        },
+        "texName": "kminus1\\_closed"
+      },
+      "kminus1_open": {
+        "value": {
+          "type": "Num",
+          "value": 300000000
+        },
+        "texName": "kminus1\\_open"
+      },
+      "k1_closed": {
+        "value": {
+          "type": "Num",
+          "value": 4000000000
+        },
+        "texName": "k1\\_closed"
+      },
+      "k1_open": {
+        "value": {
+          "type": "Num",
+          "value": 25000000000
+        },
+        "texName": "k1\\_open"
+      },
+      "Ke": {
+        "value": {
+          "type": "Num",
+          "value": 1000000
+        },
+        "texName": "Ke"
+      },
+      "k01": {
+        "value": {
+          "type": "Num",
+          "value": 50
+        },
+        "texName": "k01"
+      },
+      "k12": {
+        "value": {
+          "type": "Num",
+          "value": 30000
+        },
+        "texName": "k12"
+      },
+      "k23": {
+        "value": {
+          "type": "Num",
+          "value": 10000
+        },
+        "texName": "k23"
+      },
+      "k30": {
+        "value": {
+          "type": "Num",
+          "value": 3000
+        },
+        "texName": "k30"
+      },
+      "kox": {
+        "value": {
+          "type": "Num",
+          "value": 250
+        },
+        "texName": "kox"
+      },
+      "kz": {
+        "value": {
+          "type": "Num",
+          "value": 5000000
+        },
+        "texName": "kz"
+      },
+      "P680Pheo_total_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "P680Pheo\\_total\\_i"
+      },
+      "kAB1_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "kAB1\\_i"
+      },
+      "kAB2_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "kAB2\\_i"
+      },
+      "kBA1_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "kBA1\\_i"
+      },
+      "kBA2_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "kBA2\\_i"
+      },
+      "k3_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "k3\\_i"
+      },
+      "kr3_i": {
+        "value": {
+          "type": "Num",
+          "value": 0
+        },
+        "texName": "kr3\\_i"
+      }
+    },
+    "reactions": {
+      "light_to_Ap": {
+        "fn": {
+          "type": "Name",
+          "value": "Ia"
+        },
+        "stoichiometry": {
+          "Ap": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "light\\_to\\_Ap"
+      },
+      "light_to_U": {
+        "fn": {
+          "type": "Name",
+          "value": "Ic"
+        },
+        "stoichiometry": {
+          "U": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "light\\_to\\_U"
+      },
+      "light_to_Aip": {
+        "fn": {
+          "type": "Name",
+          "value": "Ai"
+        },
+        "stoichiometry": {
+          "Aip": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "light\\_to\\_Aip"
+      },
+      "light_to_Ui": {
+        "fn": {
+          "type": "Name",
+          "value": "Iui"
+        },
+        "stoichiometry": {
+          "Ui": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "light\\_to\\_Ui"
+      },
+      "light_to_Uifc": {
+        "fn": {
+          "type": "Name",
+          "value": "Iuif"
+        },
+        "stoichiometry": {
+          "Uifc": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "light\\_to\\_Uifc"
+      },
+      "vAipf": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Aip"
+            },
+            {
+              "type": "Name",
+              "value": "kAf"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Aip": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vAipf"
+      },
+      "vUif": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Ui"
+            },
+            {
+              "type": "Name",
+              "value": "kUf"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Ui": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vUif"
+      },
+      "vUifcf": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Uifc"
+            },
+            {
+              "type": "Name",
+              "value": "kUf"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Uifc": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vUifcf"
+      },
+      "vAipd": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Aip"
+            },
+            {
+              "type": "Name",
+              "value": "kAd"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Aip": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vAipd"
+      },
+      "vUifcd": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Uifc"
+            },
+            {
+              "type": "Name",
+              "value": "kUd_closed"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Uifc": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vUifcd"
+      },
+      "vAf": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Ap"
+            },
+            {
+              "type": "Name",
+              "value": "kAf"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Ap": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vAf"
+      },
+      "vAd": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Ap"
+            },
+            {
+              "type": "Name",
+              "value": "kAd"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Ap": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vAd"
+      },
+      "vAU": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Ap"
+            },
+            {
+              "type": "Name",
+              "value": "kAU"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Ap": {
+            "type": "Num",
+            "value": -1
+          },
+          "U": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vAU"
+      },
+      "vUA": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "U"
+            },
+            {
+              "type": "Name",
+              "value": "kUA"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "U": {
+            "type": "Num",
+            "value": -1
+          },
+          "Ap": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vUA"
+      },
+      "vUf": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "U"
+            },
+            {
+              "type": "Name",
+              "value": "kUf"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "U": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vUf"
+      },
+      "vUd": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "U"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kUd_closed"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Minus",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "q"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kUd_open"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "q"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "U": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vUd"
+      },
+      "vP680qA": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Ap"
+            },
+            {
+              "type": "Name",
+              "value": "k_c"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680plus_Pheo"
+                },
+                {
+                  "type": "Name",
+                  "value": "P680plus_Pheominus"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Ap": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vP680qA"
+      },
+      "vPQqA": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Ap"
+            },
+            {
+              "type": "Name",
+              "value": "PQ"
+            },
+            {
+              "type": "Name",
+              "value": "k_q"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Ap": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vPQqA"
+      },
+      "vP680qU": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "U"
+            },
+            {
+              "type": "Name",
+              "value": "k_c"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680plus_Pheo"
+                },
+                {
+                  "type": "Name",
+                  "value": "P680plus_Pheominus"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "U": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vP680qU"
+      },
+      "vPQqU": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PQ"
+            },
+            {
+              "type": "Name",
+              "value": "U"
+            },
+            {
+              "type": "Name",
+              "value": "k_q"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "U": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vPQqU"
+      },
+      "v1": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "P680_excited"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k1_open"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "q"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k1_closed"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Minus",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "p"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Minus",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "q"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k1_open"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "p"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Minus",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "q"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "U": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680plus_Pheominus": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v1"
+      },
+      "vminus1": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "P680plus_Pheominus"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kminus1_closed"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Minus",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "q"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kminus1_open"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "q"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680plus_Pheominus": {
+            "type": "Num",
+            "value": -1
+          },
+          "U": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vminus1"
+      },
+      "v0z_1": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0
+            },
+            {
+              "type": "LessEqual",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "P680plus_Pheominus"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "S0T"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kz"
+                    }
+                  ]
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S0T": {
+            "type": "Num",
+            "value": -1
+          },
+          "S0Tp": {
+            "type": "Num",
+            "value": 1
+          },
+          "P680plus_Pheominus": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680_Pheominus": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v0z\\_1"
+      },
+      "v0z_2": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0
+            },
+            {
+              "type": "LessEqual",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "P680plus_Pheo"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "S0T"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kz"
+                    }
+                  ]
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S0T": {
+            "type": "Num",
+            "value": -1
+          },
+          "S0Tp": {
+            "type": "Num",
+            "value": 1
+          },
+          "P680plus_Pheo": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v0z\\_2"
+      },
+      "v1z_1": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0
+            },
+            {
+              "type": "LessEqual",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "P680plus_Pheominus"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "S1T"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kz"
+                    }
+                  ]
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S1T": {
+            "type": "Num",
+            "value": -1
+          },
+          "S1Tp": {
+            "type": "Num",
+            "value": 1
+          },
+          "P680plus_Pheominus": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680_Pheominus": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v1z\\_1"
+      },
+      "v1z_2": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0
+            },
+            {
+              "type": "LessEqual",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "P680plus_Pheo"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "S1T"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kz"
+                    }
+                  ]
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S1T": {
+            "type": "Num",
+            "value": -1
+          },
+          "S1Tp": {
+            "type": "Num",
+            "value": 1
+          },
+          "P680plus_Pheo": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v1z\\_2"
+      },
+      "v2z_1": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0
+            },
+            {
+              "type": "LessEqual",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "P680plus_Pheominus"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "S2T"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kz"
+                    }
+                  ]
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S2T": {
+            "type": "Num",
+            "value": -1
+          },
+          "S2Tp": {
+            "type": "Num",
+            "value": 1
+          },
+          "P680plus_Pheominus": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680_Pheominus": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v2z\\_1"
+      },
+      "v2z_2": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0
+            },
+            {
+              "type": "LessEqual",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "P680plus_Pheo"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "S2T"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kz"
+                    }
+                  ]
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S2T": {
+            "type": "Num",
+            "value": -1
+          },
+          "S2Tp": {
+            "type": "Num",
+            "value": 1
+          },
+          "P680plus_Pheo": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v2z\\_2"
+      },
+      "v3z_1": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0
+            },
+            {
+              "type": "LessEqual",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "P680plus_Pheominus"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "S3T"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kz"
+                    }
+                  ]
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S3T": {
+            "type": "Num",
+            "value": -1
+          },
+          "S3Tp": {
+            "type": "Num",
+            "value": 1
+          },
+          "P680plus_Pheominus": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680_Pheominus": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v3z\\_1"
+      },
+      "v3z_2": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0
+            },
+            {
+              "type": "LessEqual",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "P680plus_Pheo"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "S3T"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kz"
+                    }
+                  ]
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S3T": {
+            "type": "Num",
+            "value": -1
+          },
+          "S3Tp": {
+            "type": "Num",
+            "value": 1
+          },
+          "P680plus_Pheo": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v3z\\_2"
+      },
+      "vS0Tp_S1T": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "S0Tp"
+            },
+            {
+              "type": "Name",
+              "value": "k01"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S0Tp": {
+            "type": "Num",
+            "value": -1
+          },
+          "S1T": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vS0Tp\\_S1T"
+      },
+      "vS1Tp_S2T": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "S1Tp"
+            },
+            {
+              "type": "Name",
+              "value": "k12"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S1Tp": {
+            "type": "Num",
+            "value": -1
+          },
+          "S2T": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vS1Tp\\_S2T"
+      },
+      "vS2Tp_S3T": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "S2Tp"
+            },
+            {
+              "type": "Name",
+              "value": "k23"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S2Tp": {
+            "type": "Num",
+            "value": -1
+          },
+          "S3T": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vS2Tp\\_S3T"
+      },
+      "vS3Tp_S0T": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "S3Tp"
+            },
+            {
+              "type": "Name",
+              "value": "k30"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S3Tp": {
+            "type": "Num",
+            "value": -1
+          },
+          "S0T": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vS3Tp\\_S0T"
+      },
+      "v2_0_1": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "P680plus_Pheominus"
+            },
+            {
+              "type": "Name",
+              "value": "a_QB"
+            },
+            {
+              "type": "Name",
+              "value": "k2"
+            },
+            {
+              "type": "Name",
+              "value": "q"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680plus_Pheominus": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680plus_Pheo": {
+            "type": "Num",
+            "value": 1
+          },
+          "QA_QB": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QB": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v2\\_0\\_1"
+      },
+      "vr2_0_1": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680plus_fraction"
+                },
+                {
+                  "type": "Name",
+                  "value": "QAred_QB"
+                },
+                {
+                  "type": "Name",
+                  "value": "k2"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "Ke"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680plus_Pheo": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680plus_Pheominus": {
+            "type": "Num",
+            "value": 1
+          },
+          "QAred_QB": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QB": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vr2\\_0\\_1"
+      },
+      "v2_0_2": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "P680_Pheominus"
+            },
+            {
+              "type": "Name",
+              "value": "a_QB"
+            },
+            {
+              "type": "Name",
+              "value": "k2"
+            },
+            {
+              "type": "Name",
+              "value": "q"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680_Pheominus": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QB": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QB": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v2\\_0\\_2"
+      },
+      "vr2_0_2": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680_ground_fraction"
+                },
+                {
+                  "type": "Name",
+                  "value": "QAred_QB"
+                },
+                {
+                  "type": "Name",
+                  "value": "k2"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "Ke"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680_Pheominus": {
+            "type": "Num",
+            "value": 1
+          },
+          "QAred_QB": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QB": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vr2\\_0\\_2"
+      },
+      "v2_1_1": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "P680plus_Pheominus"
+            },
+            {
+              "type": "Name",
+              "value": "b_QBred"
+            },
+            {
+              "type": "Name",
+              "value": "k2"
+            },
+            {
+              "type": "Name",
+              "value": "q"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680plus_Pheominus": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680plus_Pheo": {
+            "type": "Num",
+            "value": 1
+          },
+          "QA_QBred": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QBred": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v2\\_1\\_1"
+      },
+      "vr2_1_1": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680plus_fraction"
+                },
+                {
+                  "type": "Name",
+                  "value": "QAred_QBred"
+                },
+                {
+                  "type": "Name",
+                  "value": "k2"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "Ke"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680plus_Pheo": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680plus_Pheominus": {
+            "type": "Num",
+            "value": 1
+          },
+          "QAred_QBred": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QBred": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vr2\\_1\\_1"
+      },
+      "v2_1_2": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "P680_Pheominus"
+            },
+            {
+              "type": "Name",
+              "value": "b_QBred"
+            },
+            {
+              "type": "Name",
+              "value": "k2"
+            },
+            {
+              "type": "Name",
+              "value": "q"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680_Pheominus": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QBred": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QBred": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v2\\_1\\_2"
+      },
+      "vr2_1_2": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680_ground_fraction"
+                },
+                {
+                  "type": "Name",
+                  "value": "QAred_QBred"
+                },
+                {
+                  "type": "Name",
+                  "value": "k2"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "Ke"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680_Pheominus": {
+            "type": "Num",
+            "value": 1
+          },
+          "QAred_QBred": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QBred": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vr2\\_1\\_2"
+      },
+      "v2_2_1": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "P680plus_Pheominus"
+            },
+            {
+              "type": "Name",
+              "value": "c_QB2red"
+            },
+            {
+              "type": "Name",
+              "value": "k2"
+            },
+            {
+              "type": "Name",
+              "value": "q"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680plus_Pheominus": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680plus_Pheo": {
+            "type": "Num",
+            "value": 1
+          },
+          "QA_QB2red": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QB2red": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v2\\_2\\_1"
+      },
+      "vr2_2_1": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680plus_fraction"
+                },
+                {
+                  "type": "Name",
+                  "value": "QAred_QB2red"
+                },
+                {
+                  "type": "Name",
+                  "value": "k2"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "Ke"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680plus_Pheo": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680plus_Pheominus": {
+            "type": "Num",
+            "value": 1
+          },
+          "QAred_QB2red": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QB2red": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vr2\\_2\\_1"
+      },
+      "v2_2_2": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "P680_Pheominus"
+            },
+            {
+              "type": "Name",
+              "value": "c_QB2red"
+            },
+            {
+              "type": "Name",
+              "value": "k2"
+            },
+            {
+              "type": "Name",
+              "value": "q"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680_Pheominus": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QB2red": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QB2red": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v2\\_2\\_2"
+      },
+      "vr2_2_2": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680_ground_fraction"
+                },
+                {
+                  "type": "Name",
+                  "value": "QAred_QB2red"
+                },
+                {
+                  "type": "Name",
+                  "value": "k2"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "Ke"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680_Pheominus": {
+            "type": "Num",
+            "value": 1
+          },
+          "QAred_QB2red": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QB2red": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vr2\\_2\\_2"
+      },
+      "vAB1": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "QAred_QB"
+            },
+            {
+              "type": "Name",
+              "value": "kAB1"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "QAred_QB": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QBred": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vAB1"
+      },
+      "vBA1": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "QA_QBred"
+            },
+            {
+              "type": "Name",
+              "value": "kBA1"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "QA_QBred": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QB": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vBA1"
+      },
+      "vAB2": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "QAred_QBred"
+            },
+            {
+              "type": "Name",
+              "value": "kAB2"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "QAred_QBred": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QB2red": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vAB2"
+      },
+      "vBA2": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "QA_QB2red"
+            },
+            {
+              "type": "Name",
+              "value": "kBA2"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "QA_QB2red": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QBred": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vBA2"
+      },
+      "v3": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PQ"
+                },
+                {
+                  "type": "Name",
+                  "value": "QA_QB2red"
+                },
+                {
+                  "type": "Name",
+                  "value": "k3"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "PQ_total"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "QA_QB2red": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QB": {
+            "type": "Num",
+            "value": 1
+          },
+          "PQH2": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v3"
+      },
+      "vr3": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PQH2"
+                },
+                {
+                  "type": "Name",
+                  "value": "QA_QB"
+                },
+                {
+                  "type": "Name",
+                  "value": "kr3"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "PQ_total"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "QA_QB": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QB2red": {
+            "type": "Num",
+            "value": 1
+          },
+          "PQH2": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vr3"
+      },
+      "v3_n": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PQ"
+                },
+                {
+                  "type": "Name",
+                  "value": "QAred_QB2red"
+                },
+                {
+                  "type": "Name",
+                  "value": "k3"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "PQ_total"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "QAred_QB2red": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QB": {
+            "type": "Num",
+            "value": 1
+          },
+          "PQH2": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v3\\_n"
+      },
+      "vr3_n": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PQH2"
+                },
+                {
+                  "type": "Name",
+                  "value": "QAred_QB"
+                },
+                {
+                  "type": "Name",
+                  "value": "kr3"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "PQ_total"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "QAred_QB": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QB2red": {
+            "type": "Num",
+            "value": 1
+          },
+          "PQH2": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vr3\\_n"
+      },
+      "vUid": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Ui"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kUd_closed"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Minus",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "q_i"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kUd_open"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "q_i"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Ui": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vUid"
+      },
+      "vP680q_Ui": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "Ui"
+            },
+            {
+              "type": "Name",
+              "value": "k_c"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680plus_Pheo_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "P680plus_Pheominus_i"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Ui": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vP680q\\_Ui"
+      },
+      "vPQq_Ui": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PQ"
+            },
+            {
+              "type": "Name",
+              "value": "Ui"
+            },
+            {
+              "type": "Name",
+              "value": "k_q"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Ui": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vPQq\\_Ui"
+      },
+      "v1_i": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "P680_excited_i"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k1_open"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "q_i"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k1_closed"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Minus",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "p"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Minus",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "q_i"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "k1_open"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "p"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Minus",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "q_i"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "Ui": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680plus_Pheominus_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v1\\_i"
+      },
+      "vminus1_i": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "P680plus_Pheominus_i"
+            },
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kminus1_closed"
+                    },
+                    {
+                      "type": "Add",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 1
+                        },
+                        {
+                          "type": "Minus",
+                          "children": [
+                            {
+                              "type": "Name",
+                              "value": "q_i"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "kminus1_open"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "q_i"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680plus_Pheominus_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "Ui": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vminus1\\_i"
+      },
+      "v0z_1_i": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0
+            },
+            {
+              "type": "LessEqual",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total_i"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "P680plus_Pheominus_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "S0T_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kz"
+                    }
+                  ]
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total_i"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S0T_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "S0Tp_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "P680plus_Pheominus_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680_Pheominus_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v0z\\_1\\_i"
+      },
+      "v0z_2_i": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0
+            },
+            {
+              "type": "LessEqual",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total_i"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "P680plus_Pheo_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "S0T_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kz"
+                    }
+                  ]
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total_i"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S0T_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "S0Tp_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "P680plus_Pheo_i": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v0z\\_2\\_i"
+      },
+      "v1z_1_i": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0
+            },
+            {
+              "type": "LessEqual",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total_i"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "P680plus_Pheominus_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "S1T_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kz"
+                    }
+                  ]
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total_i"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S1T_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "S1Tp_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "P680plus_Pheominus_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680_Pheominus_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v1z\\_1\\_i"
+      },
+      "v1z_2_i": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0
+            },
+            {
+              "type": "LessEqual",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total_i"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "P680plus_Pheo_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "S1T_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kz"
+                    }
+                  ]
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total_i"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S1T_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "S1Tp_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "P680plus_Pheo_i": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v1z\\_2\\_i"
+      },
+      "v2z_1_i": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0
+            },
+            {
+              "type": "LessEqual",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total_i"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "P680plus_Pheominus_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "S2T_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kz"
+                    }
+                  ]
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total_i"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S2T_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "S2Tp_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "P680plus_Pheominus_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680_Pheominus_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v2z\\_1\\_i"
+      },
+      "v2z_2_i": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0
+            },
+            {
+              "type": "LessEqual",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total_i"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "P680plus_Pheo_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "S2T_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kz"
+                    }
+                  ]
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total_i"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S2T_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "S2Tp_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "P680plus_Pheo_i": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v2z\\_2\\_i"
+      },
+      "v3z_1_i": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0
+            },
+            {
+              "type": "LessEqual",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total_i"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "P680plus_Pheominus_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "S3T_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kz"
+                    }
+                  ]
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total_i"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S3T_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "S3Tp_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "P680plus_Pheominus_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680_Pheominus_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v3z\\_1\\_i"
+      },
+      "v3z_2_i": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Num",
+              "value": 0
+            },
+            {
+              "type": "LessEqual",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total_i"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "P680plus_Pheo_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "S3T_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kz"
+                    }
+                  ]
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total_i"
+                }
+              ]
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S3T_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "S3Tp_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "P680plus_Pheo_i": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v3z\\_2\\_i"
+      },
+      "vS0Tp_i_S1T_i": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "S0Tp_i"
+            },
+            {
+              "type": "Name",
+              "value": "k01"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S0Tp_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "S1T_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vS0Tp\\_i\\_S1T\\_i"
+      },
+      "vS1Tp_i_S2T_i": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "S1Tp_i"
+            },
+            {
+              "type": "Name",
+              "value": "k12"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S1Tp_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "S2T_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vS1Tp\\_i\\_S2T\\_i"
+      },
+      "vS2Tp_i_S3T_i": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "S2Tp_i"
+            },
+            {
+              "type": "Name",
+              "value": "k23"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S2Tp_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "S3T_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vS2Tp\\_i\\_S3T\\_i"
+      },
+      "vS3Tp_i_S0T_i": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "S3Tp_i"
+            },
+            {
+              "type": "Name",
+              "value": "k30"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "S3Tp_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "S0T_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vS3Tp\\_i\\_S0T\\_i"
+      },
+      "v2_0_1_i": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "P680plus_Pheominus_i"
+            },
+            {
+              "type": "Name",
+              "value": "a_QB_i"
+            },
+            {
+              "type": "Name",
+              "value": "k2"
+            },
+            {
+              "type": "Name",
+              "value": "q_i"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680plus_Pheominus_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680plus_Pheo_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "QA_QB_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QB_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v2\\_0\\_1\\_i"
+      },
+      "vr2_0_1_i": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680plus_fraction_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "QAred_QB_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "k2"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "Ke"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680plus_Pheo_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680plus_Pheominus_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "QAred_QB_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QB_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vr2\\_0\\_1\\_i"
+      },
+      "v2_0_2_i": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "P680_Pheominus_i"
+            },
+            {
+              "type": "Name",
+              "value": "a_QB_i"
+            },
+            {
+              "type": "Name",
+              "value": "k2"
+            },
+            {
+              "type": "Name",
+              "value": "q_i"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680_Pheominus_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QB_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QB_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v2\\_0\\_2\\_i"
+      },
+      "vr2_0_2_i": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680_ground_fraction_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "QAred_QB_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "k2"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "Ke"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680_Pheominus_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "QAred_QB_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QB_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vr2\\_0\\_2\\_i"
+      },
+      "v2_1_1_i": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "P680plus_Pheominus_i"
+            },
+            {
+              "type": "Name",
+              "value": "b_QBred_i"
+            },
+            {
+              "type": "Name",
+              "value": "k2"
+            },
+            {
+              "type": "Name",
+              "value": "q_i"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680plus_Pheominus_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680plus_Pheo_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "QA_QBred_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QBred_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v2\\_1\\_1\\_i"
+      },
+      "vr2_1_1_i": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680plus_fraction_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "QAred_QBred_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "k2"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "Ke"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680plus_Pheo_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680plus_Pheominus_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "QAred_QBred_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QBred_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vr2\\_1\\_1\\_i"
+      },
+      "v2_1_2_i": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "P680_Pheominus_i"
+            },
+            {
+              "type": "Name",
+              "value": "b_QBred_i"
+            },
+            {
+              "type": "Name",
+              "value": "k2"
+            },
+            {
+              "type": "Name",
+              "value": "q_i"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680_Pheominus_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QBred_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QBred_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v2\\_1\\_2\\_i"
+      },
+      "vr2_1_2_i": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680_ground_fraction_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "QAred_QBred_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "k2"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "Ke"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680_Pheominus_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "QAred_QBred_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QBred_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vr2\\_1\\_2\\_i"
+      },
+      "v2_2_1_i": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "P680plus_Pheominus_i"
+            },
+            {
+              "type": "Name",
+              "value": "c_QB2red_i"
+            },
+            {
+              "type": "Name",
+              "value": "k2"
+            },
+            {
+              "type": "Name",
+              "value": "q_i"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680plus_Pheominus_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680plus_Pheo_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "QA_QB2red_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QB2red_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v2\\_2\\_1\\_i"
+      },
+      "vr2_2_1_i": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680plus_fraction_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "QAred_QB2red_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "k2"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "Ke"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680plus_Pheo_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "P680plus_Pheominus_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "QAred_QB2red_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QB2red_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vr2\\_2\\_1\\_i"
+      },
+      "v2_2_2_i": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "P680_Pheominus_i"
+            },
+            {
+              "type": "Name",
+              "value": "c_QB2red_i"
+            },
+            {
+              "type": "Name",
+              "value": "k2"
+            },
+            {
+              "type": "Name",
+              "value": "q_i"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680_Pheominus_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QB2red_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QB2red_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v2\\_2\\_2\\_i"
+      },
+      "vr2_2_2_i": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680_ground_fraction_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "QAred_QB2red_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "k2"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "Ke"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "P680_Pheominus_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "QAred_QB2red_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QB2red_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vr2\\_2\\_2\\_i"
+      },
+      "vAB1_i": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "QAred_QB_i"
+            },
+            {
+              "type": "Name",
+              "value": "kAB1_i"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "QAred_QB_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QBred_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vAB1\\_i"
+      },
+      "vBA1_i": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "QA_QBred_i"
+            },
+            {
+              "type": "Name",
+              "value": "kBA1_i"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "QA_QBred_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QB_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vBA1\\_i"
+      },
+      "vAB2_i": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "QAred_QBred_i"
+            },
+            {
+              "type": "Name",
+              "value": "kAB2_i"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "QAred_QBred_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QB2red_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vAB2\\_i"
+      },
+      "vBA2_i": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "QA_QB2red_i"
+            },
+            {
+              "type": "Name",
+              "value": "kBA2_i"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "QA_QB2red_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QBred_i": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "vBA2\\_i"
+      },
+      "v3_i": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PQ"
+                },
+                {
+                  "type": "Name",
+                  "value": "QA_QB2red_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "k3_i"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "PQ_total"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "QA_QB2red_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QB_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "PQH2": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v3\\_i"
+      },
+      "vr3_i": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PQH2"
+                },
+                {
+                  "type": "Name",
+                  "value": "QA_QB_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "kr3_i"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "PQ_total"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "QA_QB_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QA_QB2red_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "PQH2": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vr3\\_i"
+      },
+      "v3_n_i": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PQ"
+                },
+                {
+                  "type": "Name",
+                  "value": "QAred_QB2red_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "k3_i"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "PQ_total"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "QAred_QB2red_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QB_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "PQH2": {
+            "type": "Num",
+            "value": 1
+          }
+        },
+        "texName": "v3\\_n\\_i"
+      },
+      "vr3_n_i": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PQH2"
+                },
+                {
+                  "type": "Name",
+                  "value": "QAred_QB_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "kr3_i"
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "PQ_total"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "QAred_QB_i": {
+            "type": "Num",
+            "value": -1
+          },
+          "QAred_QB2red_i": {
+            "type": "Num",
+            "value": 1
+          },
+          "PQH2": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "vr3\\_n\\_i"
+      },
+      "v_pq_ox": {
+        "fn": {
+          "type": "Mul",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PQH2"
+            },
+            {
+              "type": "Name",
+              "value": "kox"
+            }
+          ]
+        },
+        "stoichiometry": {
+          "PQH2": {
+            "type": "Num",
+            "value": -1
+          }
+        },
+        "texName": "v\\_pq\\_ox"
+      }
+    },
+    "derived": {
+      "P680_Pheo": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "P680Pheo_total"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680_Pheominus"
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680plus_Pheo"
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680plus_Pheominus"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "P680\\_Pheo"
+      },
+      "PQ": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "PQ_total"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "PQH2"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "PQ"
+      },
+      "QA_oxidised": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "QA_QB"
+            },
+            {
+              "type": "Name",
+              "value": "QA_QB2red"
+            },
+            {
+              "type": "Name",
+              "value": "QA_QBred"
+            }
+          ]
+        },
+        "texName": "QA\\_oxidised"
+      },
+      "QA_reduced": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "QAred_QB"
+            },
+            {
+              "type": "Name",
+              "value": "QAred_QB2red"
+            },
+            {
+              "type": "Name",
+              "value": "QAred_QBred"
+            }
+          ]
+        },
+        "texName": "QA\\_reduced"
+      },
+      "q": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "QA_oxidised"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_reduced"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "GreaterThan",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Num",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "type": "Num",
+              "value": 0
+            }
+          ]
+        },
+        "texName": "q"
+      },
+      "a_QB": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "QA_QB"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_QB"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QB2red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QBred"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "GreaterThan",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_QB"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QB2red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QBred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Num",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "type": "Num",
+              "value": 0
+            }
+          ]
+        },
+        "texName": "a\\_QB"
+      },
+      "b_QBred": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "QA_QBred"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_QB"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QB2red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QBred"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "GreaterThan",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_QB"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QB2red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QBred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Num",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "type": "Num",
+              "value": 0
+            }
+          ]
+        },
+        "texName": "b\\_QBred"
+      },
+      "c_QB2red": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "QA_QB2red"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_QB"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QB2red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QBred"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "GreaterThan",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_QB"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QB2red"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QBred"
+                    }
+                  ]
+                },
+                {
+                  "type": "Num",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "type": "Num",
+              "value": 0
+            }
+          ]
+        },
+        "texName": "c\\_QB2red"
+      },
+      "Ia": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 220
+                },
+                {
+                  "type": "Name",
+                  "value": "Iin"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 1
+                    },
+                    {
+                      "type": "Name",
+                      "value": "x"
+                    }
+                  ]
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 290
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 200
+                        },
+                        {
+                          "type": "Name",
+                          "value": "n_psi_psii"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "Ia"
+      },
+      "Ic": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Num",
+                  "value": 70
+                },
+                {
+                  "type": "Name",
+                  "value": "Iin"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 1
+                    },
+                    {
+                      "type": "Name",
+                      "value": "x"
+                    }
+                  ]
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 290
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 200
+                        },
+                        {
+                          "type": "Name",
+                          "value": "n_psi_psii"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "Ic"
+      },
+      "Ai": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Iin"
+                },
+                {
+                  "type": "Name",
+                  "value": "n_nonreducing_peripheral_chl"
+                },
+                {
+                  "type": "Name",
+                  "value": "x"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 1
+                    },
+                    {
+                      "type": "Name",
+                      "value": "x"
+                    }
+                  ]
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 290
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 200
+                        },
+                        {
+                          "type": "Name",
+                          "value": "n_psi_psii"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "Ai"
+      },
+      "Iui": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Iin"
+                },
+                {
+                  "type": "Name",
+                  "value": "n_nonreducing_core_chl"
+                },
+                {
+                  "type": "Name",
+                  "value": "x"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 1
+                    },
+                    {
+                      "type": "Name",
+                      "value": "x"
+                    }
+                  ]
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 290
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 200
+                        },
+                        {
+                          "type": "Name",
+                          "value": "n_psi_psii"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "Iui"
+      },
+      "Iuif": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "Iin"
+                },
+                {
+                  "type": "Name",
+                  "value": "n_nonreducing_detached_chl"
+                },
+                {
+                  "type": "Name",
+                  "value": "x"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 1
+                    },
+                    {
+                      "type": "Name",
+                      "value": "x"
+                    }
+                  ]
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 290
+                    },
+                    {
+                      "type": "Mul",
+                      "children": [
+                        {
+                          "type": "Num",
+                          "value": 200
+                        },
+                        {
+                          "type": "Name",
+                          "value": "n_psi_psii"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "Iuif"
+      },
+      "equilibrium_ratio": {
+        "fn": {
+          "type": "Exp",
+          "child": {
+            "type": "Minus",
+            "children": [
+              {
+                "type": "Divide",
+                "children": [
+                  {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Name",
+                        "value": "c_light"
+                      },
+                      {
+                        "type": "Name",
+                        "value": "h"
+                      },
+                      {
+                        "type": "Add",
+                        "children": [
+                          {
+                            "type": "Divide",
+                            "children": [
+                              {
+                                "type": "Num",
+                                "value": 1
+                              },
+                              {
+                                "type": "Name",
+                                "value": "lambda_chl"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Minus",
+                            "children": [
+                              {
+                                "type": "Divide",
+                                "children": [
+                                  {
+                                    "type": "Num",
+                                    "value": 1
+                                  },
+                                  {
+                                    "type": "Name",
+                                    "value": "lambda_p680"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Mul",
+                    "children": [
+                      {
+                        "type": "Name",
+                        "value": "k_boltzmann"
+                      },
+                      {
+                        "type": "Name",
+                        "value": "temperature"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "texName": "equilibrium\\_ratio"
+      },
+      "P680_excited": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680_Pheo"
+                },
+                {
+                  "type": "Name",
+                  "value": "U"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "n_core_chl"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 1
+                    },
+                    {
+                      "type": "Name",
+                      "value": "equilibrium_ratio"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "P680\\_excited"
+      },
+      "k_q": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Add",
+              "children": [
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 0.15
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kUd_closed"
+                    }
+                  ]
+                },
+                {
+                  "type": "Mul",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 0.15
+                    },
+                    {
+                      "type": "Name",
+                      "value": "kUf"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Name",
+              "value": "PQ_total"
+            }
+          ]
+        },
+        "texName": "k\\_q"
+      },
+      "P680plus_fraction": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680plus_Pheo"
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total"
+                }
+              ]
+            },
+            {
+              "type": "GreaterThan",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Num",
+              "value": 0
+            }
+          ]
+        },
+        "texName": "P680plus\\_fraction"
+      },
+      "P680_ground_fraction": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680_Pheo"
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total"
+                }
+              ]
+            },
+            {
+              "type": "GreaterThan",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Num",
+              "value": 0
+            }
+          ]
+        },
+        "texName": "P680\\_ground\\_fraction"
+      },
+      "P680_Pheo_i": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "P680Pheo_total_i"
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680_Pheominus_i"
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680plus_Pheo_i"
+                }
+              ]
+            },
+            {
+              "type": "Minus",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680plus_Pheominus_i"
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "P680\\_Pheo\\_i"
+      },
+      "QA_oxidised_i": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "QA_QB2red_i"
+            },
+            {
+              "type": "Name",
+              "value": "QA_QB_i"
+            },
+            {
+              "type": "Name",
+              "value": "QA_QBred_i"
+            }
+          ]
+        },
+        "texName": "QA\\_oxidised\\_i"
+      },
+      "QA_reduced_i": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Name",
+              "value": "QAred_QB2red_i"
+            },
+            {
+              "type": "Name",
+              "value": "QAred_QB_i"
+            },
+            {
+              "type": "Name",
+              "value": "QAred_QBred_i"
+            }
+          ]
+        },
+        "texName": "QA\\_reduced\\_i"
+      },
+      "q_i": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "QA_oxidised_i"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_oxidised_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_reduced_i"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "GreaterThan",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_oxidised_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_reduced_i"
+                    }
+                  ]
+                },
+                {
+                  "type": "Num",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "type": "Num",
+              "value": 0
+            }
+          ]
+        },
+        "texName": "q\\_i"
+      },
+      "a_QB_i": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "QA_QB_i"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_QB2red_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QB_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QBred_i"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "GreaterThan",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_QB2red_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QB_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QBred_i"
+                    }
+                  ]
+                },
+                {
+                  "type": "Num",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "type": "Num",
+              "value": 0
+            }
+          ]
+        },
+        "texName": "a\\_QB\\_i"
+      },
+      "b_QBred_i": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "QA_QBred_i"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_QB2red_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QB_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QBred_i"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "GreaterThan",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_QB2red_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QB_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QBred_i"
+                    }
+                  ]
+                },
+                {
+                  "type": "Num",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "type": "Num",
+              "value": 0
+            }
+          ]
+        },
+        "texName": "b\\_QBred\\_i"
+      },
+      "c_QB2red_i": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "QA_QB2red_i"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_QB2red_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QB_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QBred_i"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "GreaterThan",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_QB2red_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QB_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_QBred_i"
+                    }
+                  ]
+                },
+                {
+                  "type": "Num",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "type": "Num",
+              "value": 0
+            }
+          ]
+        },
+        "texName": "c\\_QB2red\\_i"
+      },
+      "P680_excited_i": {
+        "fn": {
+          "type": "Divide",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680_Pheo_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "Ui"
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "n_nonreducing_core_chl"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Num",
+                      "value": 1
+                    },
+                    {
+                      "type": "Name",
+                      "value": "equilibrium_ratio"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "P680\\_excited\\_i"
+      },
+      "P680plus_fraction_i": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680plus_Pheo_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total_i"
+                }
+              ]
+            },
+            {
+              "type": "GreaterThan",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total_i"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Num",
+              "value": 0
+            }
+          ]
+        },
+        "texName": "P680plus\\_fraction\\_i"
+      },
+      "P680_ground_fraction_i": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "P680_Pheo_i"
+                },
+                {
+                  "type": "Name",
+                  "value": "P680Pheo_total_i"
+                }
+              ]
+            },
+            {
+              "type": "GreaterThan",
+              "children": [
+                {
+                  "type": "Abs",
+                  "child": {
+                    "type": "Name",
+                    "value": "P680Pheo_total_i"
+                  }
+                },
+                {
+                  "type": "Num",
+                  "value": 1e-30
+                }
+              ]
+            },
+            {
+              "type": "Num",
+              "value": 0
+            }
+          ]
+        },
+        "texName": "P680\\_ground\\_fraction\\_i"
+      },
+      "F": {
+        "fn": {
+          "type": "Add",
+          "children": [
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "kAf"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "Aip"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Ap"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Mul",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "kUf"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "U"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Ui"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "Uifc"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "texName": "F"
+      },
+      "QA_reduction_fraction": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "QA_reduced"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_reduced"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "GreaterThan",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_reduced"
+                    }
+                  ]
+                },
+                {
+                  "type": "Num",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "type": "Num",
+              "value": 0
+            }
+          ]
+        },
+        "texName": "QA\\_reduction\\_fraction"
+      },
+      "QA_reduction_fraction_i": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Name",
+                  "value": "QA_reduced_i"
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_oxidised_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_reduced_i"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "GreaterThan",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_oxidised_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_reduced_i"
+                    }
+                  ]
+                },
+                {
+                  "type": "Num",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "type": "Num",
+              "value": 0
+            }
+          ]
+        },
+        "texName": "QA\\_reduction\\_fraction\\_i"
+      },
+      "QA_reduction_fraction_total": {
+        "fn": {
+          "type": "Piecewise",
+          "children": [
+            {
+              "type": "Divide",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_reduced_i"
+                    }
+                  ]
+                },
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_oxidised_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_reduced_i"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "GreaterThan",
+              "children": [
+                {
+                  "type": "Add",
+                  "children": [
+                    {
+                      "type": "Name",
+                      "value": "QA_oxidised"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_oxidised_i"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_reduced"
+                    },
+                    {
+                      "type": "Name",
+                      "value": "QA_reduced_i"
+                    }
+                  ]
+                },
+                {
+                  "type": "Num",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "type": "Num",
+              "value": 0
+            }
+          ]
+        },
+        "texName": "QA\\_reduction\\_fraction\\_total"
+      },
+      "obs_q": {
+        "fn": {
+          "type": "Name",
+          "value": "q"
+        },
+        "texName": "obs\\_q"
+      },
+      "obs_q_i": {
+        "fn": {
+          "type": "Name",
+          "value": "q_i"
+        },
+        "texName": "obs\\_q\\_i"
+      },
+      "obs_QA_oxidised": {
+        "fn": {
+          "type": "Name",
+          "value": "QA_oxidised"
+        },
+        "texName": "obs\\_QA\\_oxidised"
+      },
+      "obs_QA_reduced": {
+        "fn": {
+          "type": "Name",
+          "value": "QA_reduced"
+        },
+        "texName": "obs\\_QA\\_reduced"
+      },
+      "obs_QA_oxidised_i": {
+        "fn": {
+          "type": "Name",
+          "value": "QA_oxidised_i"
+        },
+        "texName": "obs\\_QA\\_oxidised\\_i"
+      },
+      "obs_QA_reduced_i": {
+        "fn": {
+          "type": "Name",
+          "value": "QA_reduced_i"
+        },
+        "texName": "obs\\_QA\\_reduced\\_i"
+      },
+      "obs_PQ": {
+        "fn": {
+          "type": "Name",
+          "value": "PQ"
+        },
+        "texName": "obs\\_PQ"
+      },
+      "obs_P680_excited": {
+        "fn": {
+          "type": "Name",
+          "value": "P680_excited"
+        },
+        "texName": "obs\\_P680\\_excited"
+      },
+      "obs_P680_excited_i": {
+        "fn": {
+          "type": "Name",
+          "value": "P680_excited_i"
+        },
+        "texName": "obs\\_P680\\_excited\\_i"
+      },
+      "obs_Ia": {
+        "fn": {
+          "type": "Name",
+          "value": "Ia"
+        },
+        "texName": "obs\\_Ia"
+      },
+      "obs_Ic": {
+        "fn": {
+          "type": "Name",
+          "value": "Ic"
+        },
+        "texName": "obs\\_Ic"
+      },
+      "obs_Ai": {
+        "fn": {
+          "type": "Name",
+          "value": "Ai"
+        },
+        "texName": "obs\\_Ai"
+      },
+      "obs_Iui": {
+        "fn": {
+          "type": "Name",
+          "value": "Iui"
+        },
+        "texName": "obs\\_Iui"
+      },
+      "obs_Iuif": {
+        "fn": {
+          "type": "Name",
+          "value": "Iuif"
+        },
+        "texName": "obs\\_Iuif"
+      }
+    },
+    "readouts": {}
+  }
+}
