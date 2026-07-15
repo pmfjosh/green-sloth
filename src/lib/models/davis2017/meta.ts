@@ -3,7 +3,7 @@ import type { ModelMeta } from "$lib/types";
 
 export const meta: ModelMeta = {
   slug: "davis2017",
-  title: "Davis 2017, eLife",
+  title: "Davis 2017, Philos Trans.",
   DOI: "10.1098/rstb.2016.0381",
   tags: {
     "Part of Photosynthesis": [
