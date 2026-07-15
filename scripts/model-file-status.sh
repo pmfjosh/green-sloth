@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Overview table: which models have meta.ts, model.ts and model.mxl.json.
+# Overview table: which models have meta.ts, model.ts, model.mxl.json, and a non-empty figs/ dir.
 #
 # Usage: scripts/model-file-status.sh
 set -euo pipefail
@@ -19,7 +19,15 @@ check() {
     fi
 }
 
-printf "${BOLD}%-25s %-10s %-10s %-15s${RESET}\n" "model" "meta.ts" "model.ts" "model.mxl.json"
+check_figs() {
+    if [[ -d "$1" ]] && [[ -n "$(ls -A "$1")" ]]; then
+        printf "${GREEN}✓${RESET}"
+    else
+        printf "${RED}✗${RESET}"
+    fi
+}
+
+printf "${BOLD}%-25s %-10s %-10s %-10s %-15s %-10s${RESET}\n" "model" "meta.ts" "model.ts" "model.md" "model.mxl.json" "figs/"
 
 for model_dir in "$dir"/*/; do
     slug="$(basename "$model_dir")"
@@ -29,6 +37,10 @@ for model_dir in "$dir"/*/; do
     printf "          "
     check "$model_dir/model.ts"
     printf "          "
+    check "$model_dir/model.md"
+    printf "          "
     check "$model_dir/model.mxl.json"
+    printf "               "
+    check_figs "$model_dir/figs"
     printf "\n"
 done
