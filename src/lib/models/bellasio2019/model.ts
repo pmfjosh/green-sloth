@@ -126,10 +126,12 @@ export function initModel(): KineticModelBuilder {
       texName: "tau\\_d",
     })
     .addParameter("km_v_RuBisCO_c_CO2", {
+      displayName: names.km_rubisco_carboxylase_co2,
       value: 0.014,
       texName: "km\\_v\\_RuBisCO\\_c\\_CO2",
     })
     .addParameter("km_v_RuBisCO_c_RUBP", {
+      displayName: names.km_rubisco_carboxylase_rubp,
       value: 0.02,
       texName: "km\\_v\\_RuBisCO\\_c\\_RUBP",
     })
@@ -138,6 +140,7 @@ export function initModel(): KineticModelBuilder {
       texName: "km\\_v\\_RuBisCO\\_c\\_O2",
     })
     .addParameter("ki_v_RuBisCO_c_PGA", {
+      displayName: names.ki_rubisco_carboxylase_pga,
       value: 2.52,
       texName: "ki\\_v\\_RuBisCO\\_c\\_PGA",
     })
@@ -150,14 +153,17 @@ export function initModel(): KineticModelBuilder {
       texName: "ki\\_v\\_RuBisCO\\_c\\_ADP\\_st",
     })
     .addParameter("ki_v_RuBisCO_c_Pi_st", {
+      displayName: names.ki_rubisco_carboxylase_pi,
       value: 3.6,
       texName: "ki\\_v\\_RuBisCO\\_c\\_Pi\\_st",
     })
     .addParameter("vmax_v_RuBisCO_c", {
+      displayName: names.vmax_rubisco_carboxylase,
       value: 0.2,
       texName: "vmax\\_v\\_RuBisCO\\_c",
     })
     .addParameter("kcat_v_RuBisCO_c", {
+      displayName: names.kcat_rubisco_carboxylase,
       value: 4.7,
       texName: "kcat\\_v\\_RuBisCO\\_c",
     })
@@ -166,6 +172,7 @@ export function initModel(): KineticModelBuilder {
       texName: "S\\_co\\_gas",
     })
     .addParameter("vmax_v_PRKase", {
+      displayName: names.vmax_phosphoribulokinase,
       value: 1.17,
       texName: "vmax\\_v\\_PRKase",
     })
@@ -174,6 +181,7 @@ export function initModel(): KineticModelBuilder {
       texName: "keq\\_v\\_PRKase",
     })
     .addParameter("km_v_PRKase_ATP_st", {
+      displayName: names.km_phosphoribulokinase_atp,
       value: 0.625,
       texName: "km\\_v\\_PRKase\\_ATP\\_st",
     })
@@ -182,18 +190,22 @@ export function initModel(): KineticModelBuilder {
       texName: "ki\\_v\\_PRKase\\_ADP\\_st",
     })
     .addParameter("km_v_PRKase_RU5P", {
+      displayName: names.km_phosphoribulokinase_ru5p,
       value: 0.034,
       texName: "km\\_v\\_PRKase\\_RU5P",
     })
     .addParameter("ki_v_PRKase_PGA", {
+      displayName: names.ki_phosphoribulokinase_pga,
       value: 2.0,
       texName: "ki\\_v\\_PRKase\\_PGA",
     })
     .addParameter("ki_v_PRKase_RUBP", {
+      displayName: names.ki_phosphoribulokinase_rubp,
       value: 0.7,
       texName: "ki\\_v\\_PRKase\\_RUBP",
     })
     .addParameter("ki_v_PRKase_Pi_st", {
+      displayName: names.ki_phosphoribulokinase_pi,
       value: 4.0,
       texName: "ki\\_v\\_PRKase\\_Pi\\_st",
     })
@@ -270,6 +282,7 @@ export function initModel(): KineticModelBuilder {
       texName: "keq\\_v\\_FNR",
     })
     .addParameter("km_v_FNR_NADP_st", {
+      displayName: names.km_fnr_nadp,
       value: 0.0072,
       texName: "km\\_v\\_FNR\\_NADP\\_st",
     })
@@ -282,6 +295,7 @@ export function initModel(): KineticModelBuilder {
       texName: "Kj\\_NADPH",
     })
     .addParameter("keq_v_ATPsynth", {
+      displayName: names.keq_atp_synthase,
       value: 5734.0,
       texName: "keq\\_v\\_ATPsynth",
     })
@@ -346,10 +360,12 @@ export function initModel(): KineticModelBuilder {
       texName: "gs0",
     })
     .addParameter("NADP_tot", {
+      displayName: names.nadp_tot,
       value: 0.5,
       texName: "NADP\\_tot",
     })
     .addVariable("CO2", {
+      displayName: names.co2,
       value: new Divide([
         new Mul([new Num(0.3), new Name("Ca")]),
         new Name("Kh_co2"),
@@ -361,26 +377,28 @@ export function initModel(): KineticModelBuilder {
       texName: "HCO3",
     })
     .addVariable("RUBP", {
+      displayName: names.rubp,
       value: 2.0,
       texName: "RUBP",
     })
-    .addVariable("PGA", {
-      value: 4.0,
-      texName: "PGA",
-    })
+    .addVariable("PGA", { displayName: names.pga, value: 4.0, texName: "PGA" })
     .addVariable("DHAP", {
+      displayName: names.dhap,
       value: 4.0,
       texName: "DHAP",
     })
     .addVariable("ATP_st", {
+      displayName: names.atp,
       value: 0.68,
       texName: "ATP\\_st",
     })
     .addVariable("NADPH_st", {
+      displayName: names.nadph,
       value: 0.21,
       texName: "NADPH\\_st",
     })
     .addVariable("RU5P", {
+      displayName: names.ru5p,
       value: 0.34,
       texName: "RU5P",
     })
@@ -397,6 +415,7 @@ export function initModel(): KineticModelBuilder {
       texName: "J\\_ATP",
     })
     .addVariable("Ci", {
+      displayName: names.co2_intercellular,
       value: new Mul([new Num(0.65), new Name("Ca")]),
       texName: "Ci",
     })
@@ -405,10 +424,12 @@ export function initModel(): KineticModelBuilder {
       texName: "gs",
     })
     .addAssignment("ADP_st", {
+      displayName: names.adp,
       fn: new Add([new Name("AP_tot"), new Minus([new Name("ATP_st")])]),
       texName: "ADP\\_st",
     })
     .addAssignment("NADP_st", {
+      displayName: names.nadp,
       fn: new Add([new Name("NADP_tot"), new Minus([new Name("NADPH_st")])]),
       texName: "NADP\\_st",
     })
@@ -476,6 +497,7 @@ export function initModel(): KineticModelBuilder {
       texName: "f\\_rubp",
     })
     .addAssignment("O2", {
+      displayName: names.o2,
       fn: new Divide([new Name("p_o2"), new Name("Kh_o2")]),
       texName: "O2",
     })
@@ -626,6 +648,7 @@ export function initModel(): KineticModelBuilder {
       texName: "I2",
     })
     .addAssignment("PhiPSII", {
+      displayName: names.phipsii,
       fn: new Divide([
         new Mul([
           new Name("PhiPSII_LL"),
@@ -781,6 +804,7 @@ export function initModel(): KineticModelBuilder {
       texName: "gs\\_steady",
     })
     .addAssignment("A", {
+      displayName: names.net_assimilation_rate,
       fn: new Add([
         new Name("v_RuBisCO_c"),
         new Minus([new Name("RLight")]),
@@ -858,6 +882,7 @@ export function initModel(): KineticModelBuilder {
       texName: "v\\_gs",
     })
     .addReaction("v_RuBisCO_c", {
+      displayName: names.r_rubisco_carboxylase,
       fn: new Divide([
         new Mul([
           new Name("CO2"),
@@ -921,6 +946,7 @@ export function initModel(): KineticModelBuilder {
       texName: "rubisco\\_oxygenase",
     })
     .addReaction("glycine_decarboxylase", {
+      displayName: names.r_glycine_decarboxylase,
       fn: new Name("rubisco_oxygenase"),
       stoichiometry: [
         { name: "CO2", value: new Divide([new Num(0.5), new Name("V_m")]) },
@@ -929,6 +955,7 @@ export function initModel(): KineticModelBuilder {
       texName: "glycine\\_decarboxylase",
     })
     .addReaction("v_PRKase", {
+      displayName: names.r_phosphoribulokinase,
       fn: new Divide([
         new Mul([
           new Name("vmax_v_PRKase"),
@@ -1162,6 +1189,7 @@ export function initModel(): KineticModelBuilder {
       texName: "v\\_RLight",
     })
     .addReaction("v_FNR", {
+      displayName: names.r_fnr,
       fn: new Divide([
         new Mul([
           new Name("J_NADPH"),
@@ -1190,6 +1218,7 @@ export function initModel(): KineticModelBuilder {
       texName: "v\\_FNR",
     })
     .addReaction("v_ATPsynth", {
+      displayName: names.r_atp_synthase,
       fn: new Divide([
         new Mul([
           new Name("J_ATP"),

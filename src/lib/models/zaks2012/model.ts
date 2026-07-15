@@ -66,6 +66,7 @@ export function initModel(): KineticModelBuilder {
       texName: "PsbSDose",
     })
     .addParameter("kF", {
+      displayName: names.fluorescence_rate_constant,
       value: 70000000.0,
       texName: "kF",
     })
@@ -226,14 +227,17 @@ export function initModel(): KineticModelBuilder {
       texName: "StromaKStart",
     })
     .addParameter("Rconst", {
+      displayName: names.gas_constant,
       value: 8.314,
       texName: "Rconst",
     })
     .addParameter("Fconst", {
+      displayName: names.faraday_constant,
       value: 96485.0,
       texName: "Fconst",
     })
     .addParameter("Tconst", {
+      displayName: names.temperature,
       value: 300.0,
       texName: "Tconst",
     })
@@ -442,10 +446,7 @@ export function initModel(): KineticModelBuilder {
       value: 0.25,
       texName: "ATPperProton",
     })
-    .addVariable("ATP", {
-      value: 2.0,
-      texName: "ATP",
-    })
+    .addVariable("ATP", { displayName: names.atp, value: 2.0, texName: "ATP" })
     .addVariable("ActiveATPs", {
       value: 0.05,
       texName: "ActiveATPs",
@@ -455,10 +456,12 @@ export function initModel(): KineticModelBuilder {
       texName: "Antheraxanthin",
     })
     .addVariable("Fdxox", {
+      displayName: names.fd_ox,
       value: 1.0,
       texName: "Fdxox",
     })
     .addVariable("Fdxr", {
+      displayName: names.fd_red,
       value: 1e-14,
       texName: "Fdxr",
     })
@@ -498,11 +501,9 @@ export function initModel(): KineticModelBuilder {
       value: 0.2,
       texName: "PCr",
     })
-    .addVariable("PQ", {
-      value: 8.999,
-      texName: "PQ",
-    })
+    .addVariable("PQ", { displayName: names.pq, value: 8.999, texName: "PQ" })
     .addVariable("PQH2", {
+      displayName: names.pqh2,
       value: 0.001,
       texName: "PQH2",
     })
@@ -518,10 +519,7 @@ export function initModel(): KineticModelBuilder {
       value: 1e-14,
       texName: "PsbSQ",
     })
-    .addVariable("QAox", {
-      value: 1.0,
-      texName: "QAox",
-    })
+    .addVariable("QAox", { displayName: names.qa, value: 1.0, texName: "QAox" })
     .addVariable("QBneut", {
       value: 1.0,
       texName: "QBneut",
@@ -559,6 +557,7 @@ export function initModel(): KineticModelBuilder {
       texName: "pH\\_stroma",
     })
     .addAssignment("pH_lumen", {
+      displayName: names.ph_lumen,
       fn: new Add([
         new Name("pHLumenStart"),
         new Minus([
@@ -603,10 +602,12 @@ export function initModel(): KineticModelBuilder {
       texName: "deltapsi",
     })
     .addAssignment("deltapH", {
+      displayName: names.delta_ph,
       fn: new Add([new Name("pH_stroma"), new Minus([new Name("pH_lumen")])]),
       texName: "deltapH",
     })
     .addAssignment("pmf", {
+      displayName: names.pmf,
       fn: new Add([
         new Name("deltapsi"),
         new Mul([
@@ -741,6 +742,7 @@ export function initModel(): KineticModelBuilder {
       texName: "q\\_total",
     })
     .addAssignment("QAred", {
+      displayName: names.qa_red,
       fn: new Mul([
         new Name("fracIntactRC"),
         new Add([new Num(1.0), new Minus([new Name("QAox")])]),
@@ -1225,6 +1227,7 @@ export function initModel(): KineticModelBuilder {
       texName: "atp\\_synthesis",
     })
     .addReaction("vleak", {
+      displayName: names.r_proton_leak,
       fn: new Piecewise([
         new Num(0.0),
         new GreaterEqual([

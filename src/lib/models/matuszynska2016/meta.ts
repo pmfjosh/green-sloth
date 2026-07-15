@@ -3,7 +3,7 @@ import { defaultPamProtocol } from "$lib/models/pamProtocols";
 import type { ModelMeta } from "$lib/types";
 
 export const meta: ModelMeta = {
-  slug: "matuszynska2016_npq",
+  slug: "matuszynska2016",
   title: "Matuszynska 2016, BBA Bioenerg.",
   DOI: "10.1016/j.bbabio.2016.09.003",
   tags: {
@@ -15,6 +15,7 @@ export const meta: ModelMeta = {
     ],
     "Model type": ["ODE"],
     "Explains data": ["PAM fluorescence"],
+    Organism: ["Arabidopsis thaliana", "Epipremnum aureum"],
   },
   analyses: [
     {

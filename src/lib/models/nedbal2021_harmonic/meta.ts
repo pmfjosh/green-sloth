@@ -8,7 +8,8 @@ export const meta: ModelMeta = {
   tags: {
     "Part of Photosynthesis": [],
     "Model type": ["ODE"],
-    "Explains data": [],
+    "Explains data": ["Frequency domain"],
+    Organism: ["Chlorella sorokiniana"],
   },
   analyses: [
     {

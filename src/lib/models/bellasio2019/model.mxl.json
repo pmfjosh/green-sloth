@@ -28,6 +28,7 @@
             }
           ]
         },
+        "displayName": "CO2",
         "texName": "CO2"
       },
       "HCO3": {
@@ -42,6 +43,7 @@
           "type": "Num",
           "value": 2
         },
+        "displayName": "RUBP",
         "texName": "RUBP"
       },
       "PGA": {
@@ -49,6 +51,7 @@
           "type": "Num",
           "value": 4
         },
+        "displayName": "PGA",
         "texName": "PGA"
       },
       "DHAP": {
@@ -56,6 +59,7 @@
           "type": "Num",
           "value": 4
         },
+        "displayName": "DHAP",
         "texName": "DHAP"
       },
       "ATP_st": {
@@ -63,6 +67,7 @@
           "type": "Num",
           "value": 0.68
         },
+        "displayName": "ATP",
         "texName": "ATP\\_st"
       },
       "NADPH_st": {
@@ -70,6 +75,7 @@
           "type": "Num",
           "value": 0.21
         },
+        "displayName": "NADPH",
         "texName": "NADPH\\_st"
       },
       "RU5P": {
@@ -77,6 +83,7 @@
           "type": "Num",
           "value": 0.34
         },
+        "displayName": "RU5P",
         "texName": "RU5P"
       },
       "Ract": {
@@ -114,6 +121,7 @@
             }
           ]
         },
+        "displayName": "Ci",
         "texName": "Ci"
       },
       "gs": {
@@ -320,6 +328,7 @@
           "type": "Num",
           "value": 0.014
         },
+        "displayName": "km_rubisco_carboxylase_CO2",
         "texName": "km\\_v\\_RuBisCO\\_c\\_CO2"
       },
       "km_v_RuBisCO_c_RUBP": {
@@ -327,6 +336,7 @@
           "type": "Num",
           "value": 0.02
         },
+        "displayName": "km_rubisco_carboxylase_RUBP",
         "texName": "km\\_v\\_RuBisCO\\_c\\_RUBP"
       },
       "km_v_RuBisCO_c_O2": {
@@ -341,6 +351,7 @@
           "type": "Num",
           "value": 2.52
         },
+        "displayName": "ki_rubisco_carboxylase_3PGA",
         "texName": "ki\\_v\\_RuBisCO\\_c\\_PGA"
       },
       "ki_v_RuBisCO_c_NADP_st": {
@@ -362,6 +373,7 @@
           "type": "Num",
           "value": 3.6
         },
+        "displayName": "ki_rubisco_carboxylase_Pi",
         "texName": "ki\\_v\\_RuBisCO\\_c\\_Pi\\_st"
       },
       "vmax_v_RuBisCO_c": {
@@ -369,6 +381,7 @@
           "type": "Num",
           "value": 0.2
         },
+        "displayName": "vmax_rubisco_carboxylase",
         "texName": "vmax\\_v\\_RuBisCO\\_c"
       },
       "kcat_v_RuBisCO_c": {
@@ -376,6 +389,7 @@
           "type": "Num",
           "value": 4.7
         },
+        "displayName": "kcat_rubisco_carboxylase",
         "texName": "kcat\\_v\\_RuBisCO\\_c"
       },
       "S_co_gas": {
@@ -390,6 +404,7 @@
           "type": "Num",
           "value": 1.17
         },
+        "displayName": "vmax_phosphoribulokinase",
         "texName": "vmax\\_v\\_PRKase"
       },
       "keq_v_PRKase": {
@@ -404,6 +419,7 @@
           "type": "Num",
           "value": 0.625
         },
+        "displayName": "km_phosphoribulokinase_ATP",
         "texName": "km\\_v\\_PRKase\\_ATP\\_st"
       },
       "ki_v_PRKase_ADP_st": {
@@ -418,6 +434,7 @@
           "type": "Num",
           "value": 0.034
         },
+        "displayName": "km_phosphoribulokinase_RU5P",
         "texName": "km\\_v\\_PRKase\\_RU5P"
       },
       "ki_v_PRKase_PGA": {
@@ -425,6 +442,7 @@
           "type": "Num",
           "value": 2
         },
+        "displayName": "ki_phosphoribulokinase_3PGA",
         "texName": "ki\\_v\\_PRKase\\_PGA"
       },
       "ki_v_PRKase_RUBP": {
@@ -432,6 +450,7 @@
           "type": "Num",
           "value": 0.7
         },
+        "displayName": "ki_phosphoribulokinase_RUBP",
         "texName": "ki\\_v\\_PRKase\\_RUBP"
       },
       "ki_v_PRKase_Pi_st": {
@@ -439,6 +458,7 @@
           "type": "Num",
           "value": 4
         },
+        "displayName": "ki_phosphoribulokinase_Pi",
         "texName": "ki\\_v\\_PRKase\\_Pi\\_st"
       },
       "vmax_v_pgareduction": {
@@ -572,6 +592,7 @@
           "type": "Num",
           "value": 0.0072
         },
+        "displayName": "km_fnr_NADP",
         "texName": "km\\_v\\_FNR\\_NADP\\_st"
       },
       "km_v_FNR_NADPH_st": {
@@ -593,6 +614,7 @@
           "type": "Num",
           "value": 5734
         },
+        "displayName": "keq_atp_synthase",
         "texName": "keq\\_v\\_ATPsynth"
       },
       "km_v_ATPsynth_ADP_st": {
@@ -705,6 +727,7 @@
           "type": "Num",
           "value": 0.5
         },
+        "displayName": "NADP_tot",
         "texName": "NADP\\_tot"
       }
     },
@@ -1209,6 +1232,7 @@
             ]
           }
         },
+        "displayName": "rubisco carboxylase",
         "texName": "v\\_RuBisCO\\_c"
       },
       "rubisco_oxygenase": {
@@ -1359,6 +1383,7 @@
             ]
           }
         },
+        "displayName": "glycine decarboxylase",
         "texName": "glycine\\_decarboxylase"
       },
       "v_PRKase": {
@@ -1601,6 +1626,7 @@
             ]
           }
         },
+        "displayName": "phosphoribulokinase",
         "texName": "v\\_PRKase"
       },
       "v_pgareduction": {
@@ -2316,6 +2342,7 @@
             ]
           }
         },
+        "displayName": "FNR",
         "texName": "v\\_FNR"
       },
       "v_ATPsynth": {
@@ -2476,6 +2503,7 @@
             ]
           }
         },
+        "displayName": "ATP synthase",
         "texName": "v\\_ATPsynth"
       },
       "CO2_dissolution": {
@@ -2601,6 +2629,7 @@
             }
           ]
         },
+        "displayName": "ADP",
         "texName": "ADP\\_st"
       },
       "NADP_st": {
@@ -2622,6 +2651,7 @@
             }
           ]
         },
+        "displayName": "NADP",
         "texName": "NADP\\_st"
       },
       "Pi_st": {
@@ -2930,6 +2960,7 @@
             }
           ]
         },
+        "displayName": "O2",
         "texName": "O2"
       },
       "Ract_eq": {
@@ -3738,6 +3769,7 @@
             }
           ]
         },
+        "displayName": "PhiPSII",
         "texName": "PhiPSII"
       },
       "J2": {
@@ -4117,6 +4149,7 @@
             }
           ]
         },
+        "displayName": "A",
         "texName": "A"
       }
     },

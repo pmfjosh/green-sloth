@@ -21,9 +21,6 @@
     analyses: ModelAnalysis[];
   } = $props();
 
-  const DEFAULT_TIMEOUT = 30;
-  const DEFAULT_N_TIME_POINTS = 500;
-
   type Runnable = { runSimulation: (model: SteadyStateModelBuilder) => void };
   let analysisRefs = $state<Array<Runnable | undefined>>([]);
 

@@ -104,10 +104,12 @@ export function initModel(): KineticModelBuilder {
       texName: "P\\_NPQ",
     })
     .addVariable("NADP", {
+      displayName: names.nadp,
       value: 5.0,
       texName: "NADP",
     })
     .addVariable("NADPH", {
+      displayName: names.nadph,
       value: 5.0,
       texName: "NADPH",
     })
@@ -116,6 +118,7 @@ export function initModel(): KineticModelBuilder {
       texName: "R",
     })
     .addAssignment("pH", {
+      displayName: names.ph,
       fn: new Divide([new Name("NADPH"), new Name("NADP")]),
       texName: "pH",
     })
@@ -124,6 +127,7 @@ export function initModel(): KineticModelBuilder {
       texName: "ETR",
     })
     .addAssignment("A", {
+      displayName: names.net_assimilation_rate,
       fn: new Mul([new Name("NADPH"), new Name("R"), new Name("v_C")]),
       texName: "A",
     })
@@ -175,6 +179,7 @@ export function initModel(): KineticModelBuilder {
       texName: "energy\\_dissipation",
     })
     .addReaction("NPQ", {
+      displayName: names.npq,
       fn: new Mul([new Name("Q"), new Name("v_NPQ")]),
       stoichiometry: [{ name: "Q", value: new Num(-1.0) }],
       texName: "NPQ",

@@ -46,19 +46,49 @@
   const modelA = $derived(buildModel(slugA));
   const modelB = $derived(buildModel(slugB));
 
-  type Bucket = { aOnly: string[]; shared: string[]; bOnly: string[] };
+  // A "shared" pair may have differently-spelled raw ids (e.g. "ATP" vs
+  // "atp") that resolve to the same names.ts displayName; both are kept so
+  // the UI can show which spellings matched.
+  type SharedEntry = { label: string; aId: string; bId: string };
+  type Bucket = { aOnly: string[]; shared: SharedEntry[]; bOnly: string[] };
+
+  type Entry = { displayName?: string };
+
+  // Two entries count as the same concept if they share a displayName
+  // (from names.ts); otherwise identity falls back to the raw id, matching
+  // the old by-id behavior.
+  function groupKey(id: string, entry: Entry | undefined): string {
+    return entry?.displayName ?? id;
+  }
 
   function diff(
-    a: Map<string, unknown> | undefined,
-    b: Map<string, unknown> | undefined,
+    a: Map<string, Entry> | undefined,
+    b: Map<string, Entry> | undefined,
   ): Bucket {
-    const aKeys = new Set(a?.keys() ?? []);
-    const bKeys = new Set(b?.keys() ?? []);
-    const sort = (xs: Iterable<string>) => [...xs].sort();
+    const aByKey = new Map(
+      [...(a ?? [])].map(([id, e]) => [groupKey(id, e), id]),
+    );
+    const bByKey = new Map(
+      [...(b ?? [])].map(([id, e]) => [groupKey(id, e), id]),
+    );
+    const sortBy = <T,>(xs: T[], label: (x: T) => string) =>
+      xs.sort((x, y) => label(x).localeCompare(label(y)));
+
     return {
-      aOnly: sort([...aKeys].filter((k) => !bKeys.has(k))),
-      shared: sort([...aKeys].filter((k) => bKeys.has(k))),
-      bOnly: sort([...bKeys].filter((k) => !aKeys.has(k))),
+      aOnly: sortBy(
+        [...aByKey].filter(([k]) => !bByKey.has(k)).map(([, id]) => id),
+        (id) => id,
+      ),
+      bOnly: sortBy(
+        [...bByKey].filter(([k]) => !aByKey.has(k)).map(([, id]) => id),
+        (id) => id,
+      ),
+      shared: sortBy(
+        [...aByKey]
+          .filter(([k]) => bByKey.has(k))
+          .map(([label, aId]) => ({ label, aId, bId: bByKey.get(label)! })),
+        (entry) => entry.label,
+      ),
     };
   }
 
@@ -69,7 +99,7 @@
   function categoryMap(
     model: ModelBuilderBase | null,
     key: CategoryKey,
-  ): Map<string, unknown> | undefined {
+  ): Map<string, Entry> | undefined {
     if (key === "reactions") {
       return model instanceof KineticModelBuilder ? model.reactions : undefined;
     }
@@ -140,8 +170,12 @@
     return false;
   }
 
-  function filtered(ids: string[], query: string): string[] {
-    return ids.filter((id) => fuzzyMatch(id, query));
+  function filtered<T>(
+    items: T[],
+    query: string,
+    text: (item: T) => string,
+  ): T[] {
+    return items.filter((item) => fuzzyMatch(text(item), query));
   }
 
   const titleA = $derived(models[slugA]?.title ?? slugA);
@@ -181,8 +215,10 @@
 
   <H2>Overview</H2>
   <p class="note">
-    Note: overlap is computed by id; naming differences across models show up as
-    unique.
+    Note: overlap is computed by id, or by shared display name (from
+    <code>names.ts</code>) when both models tag an entry with one; identifiers
+    with no shared display name still show up as unique even if they mean the
+    same thing.
   </p>
   <div class="table-wrap">
     <table>
@@ -232,7 +268,7 @@
             .bucket.aOnly.length})
         </p>
         <ul>
-          {#each filtered(detail.bucket.aOnly, queries[detail.key]) as id (id)}
+          {#each filtered(detail.bucket.aOnly, queries[detail.key], (id) => id) as id (id)}
             <li>{id}</li>
           {:else}
             <li class="empty">—</li>
@@ -242,8 +278,13 @@
       <div class="bucket">
         <p class="bucket-head">Shared ({detail.bucket.shared.length})</p>
         <ul>
-          {#each filtered(detail.bucket.shared, queries[detail.key]) as id (id)}
-            <li>{id}</li>
+          {#each filtered(detail.bucket.shared, queries[detail.key], (e) => `${e.label} ${e.aId} ${e.bId}`) as entry (entry.label)}
+            <li>
+              {entry.label}
+              {#if entry.aId !== entry.bId}
+                <span class="aka">({entry.aId} / {entry.bId})</span>
+              {/if}
+            </li>
           {:else}
             <li class="empty">—</li>
           {/each}
@@ -255,7 +296,7 @@
             .bucket.bOnly.length})
         </p>
         <ul>
-          {#each filtered(detail.bucket.bOnly, queries[detail.key]) as id (id)}
+          {#each filtered(detail.bucket.bOnly, queries[detail.key], (id) => id) as id (id)}
             <li>{id}</li>
           {:else}
             <li class="empty">—</li>
@@ -368,6 +409,10 @@
     font-size: 0.8rem;
     font-family: var(--font-mono);
     word-break: break-all;
+  }
+
+  .aka {
+    color: var(--color-text-muted);
   }
 
   .bucket li.empty {

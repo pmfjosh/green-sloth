@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/Computational-Biology-Aachen/mxl-schemas/main/v1/kinetic-model.schema.json",
   "spec_version": "1.0",
   "kind": "kinetic",
-  "model_id": "matuszynska2016_npq",
+  "model_id": "matuszynska2016",
   "model": {
     "variables": {
       "pq_red": {
@@ -10,6 +10,7 @@
           "type": "Num",
           "value": 0
         },
+        "displayName": "PQH2",
         "texName": "pq\\_red"
       },
       "protons": {
@@ -17,6 +18,7 @@
           "type": "Num",
           "value": 0.0000632975752
         },
+        "displayName": "protons",
         "texName": "protons"
       },
       "vmax_atp_synthase": {
@@ -31,6 +33,7 @@
           "type": "Num",
           "value": 25
         },
+        "displayName": "ATP",
         "texName": "atp"
       },
       "psbs_de": {
@@ -38,6 +41,7 @@
           "type": "Num",
           "value": 1
         },
+        "displayName": "psbs_de",
         "texName": "psbs\\_de"
       },
       "vx": {
@@ -45,6 +49,7 @@
           "type": "Num",
           "value": 1
         },
+        "displayName": "vx",
         "texName": "vx"
       }
     },
@@ -54,6 +59,7 @@
           "type": "Num",
           "value": 2.5
         },
+        "displayName": "PSII_total",
         "texName": "PSII\\_tot"
       },
       "PQ_tot": {
@@ -61,6 +67,7 @@
           "type": "Num",
           "value": 20
         },
+        "displayName": "PQ_tot",
         "texName": "PQ\\_tot"
       },
       "AP_tot": {
@@ -68,6 +75,7 @@
           "type": "Num",
           "value": 50
         },
+        "displayName": "AP_tot",
         "texName": "AP\\_tot"
       },
       "PsbS_tot": {
@@ -75,6 +83,7 @@
           "type": "Num",
           "value": 1
         },
+        "displayName": "PsbS_tot",
         "texName": "PsbS\\_tot"
       },
       "X_tot": {
@@ -96,6 +105,7 @@
           "type": "Num",
           "value": 0.01
         },
+        "displayName": "Pi",
         "texName": "Pi"
       },
       "k_Cytb6f": {
@@ -145,6 +155,7 @@
           "type": "Num",
           "value": 5000000000
         },
+        "displayName": "kH",
         "texName": "k\\_H"
       },
       "k_F": {
@@ -152,6 +163,7 @@
           "type": "Num",
           "value": 625000000
         },
+        "displayName": "kF",
         "texName": "k\\_F"
       },
       "k_P": {
@@ -159,6 +171,7 @@
           "type": "Num",
           "value": 5000000000
         },
+        "displayName": "k2",
         "texName": "k\\_P"
       },
       "k_PTOX": {
@@ -166,6 +179,7 @@
           "type": "Num",
           "value": 0.01
         },
+        "displayName": "kPTOX",
         "texName": "k\\_PTOX"
       },
       "pH_st": {
@@ -173,6 +187,7 @@
           "type": "Num",
           "value": 7.8
         },
+        "displayName": "pH",
         "texName": "pH\\_st"
       },
       "k_leak": {
@@ -187,6 +202,7 @@
           "type": "Num",
           "value": 100
         },
+        "displayName": "bH",
         "texName": "b\\_H"
       },
       "hpr": {
@@ -194,6 +210,7 @@
           "type": "Num",
           "value": 4.666666666666667
         },
+        "displayName": "HPR",
         "texName": "hpr"
       },
       "k_DV": {
@@ -229,6 +246,7 @@
           "type": "Num",
           "value": 0.12
         },
+        "displayName": "K_ZSat",
         "texName": "K\\_ZSat"
       },
       "nhl": {
@@ -264,6 +282,7 @@
           "type": "Num",
           "value": 0.1
         },
+        "displayName": "gamma0",
         "texName": "gamma\\_0"
       },
       "gamma_1": {
@@ -271,6 +290,7 @@
           "type": "Num",
           "value": 0.25
         },
+        "displayName": "gamma1",
         "texName": "gamma\\_1"
       },
       "gamma_2": {
@@ -278,6 +298,7 @@
           "type": "Num",
           "value": 0.6
         },
+        "displayName": "gamma2",
         "texName": "gamma\\_2"
       },
       "gamma_3": {
@@ -285,6 +306,7 @@
           "type": "Num",
           "value": 0.15
         },
+        "displayName": "gamma3",
         "texName": "gamma\\_3"
       },
       "F": {
@@ -292,6 +314,7 @@
           "type": "Num",
           "value": 96.485
         },
+        "displayName": "F",
         "texName": "F"
       },
       "R": {
@@ -299,6 +322,7 @@
           "type": "Num",
           "value": 0.0083
         },
+        "displayName": "R",
         "texName": "R"
       },
       "T": {
@@ -306,6 +330,7 @@
           "type": "Num",
           "value": 298
         },
+        "displayName": "T",
         "texName": "T"
       },
       "E0_QA": {
@@ -313,6 +338,7 @@
           "type": "Num",
           "value": -0.14
         },
+        "displayName": "E0_QA",
         "texName": "E0\\_QA"
       },
       "E0_PQ": {
@@ -320,6 +346,7 @@
           "type": "Num",
           "value": 0.354
         },
+        "displayName": "E0_PQ",
         "texName": "E0\\_PQ"
       },
       "E0_PC": {
@@ -327,6 +354,7 @@
           "type": "Num",
           "value": 0.38
         },
+        "displayName": "E0_PC",
         "texName": "E0\\_PC"
       },
       "DG_ATP": {
@@ -388,6 +416,7 @@
             ]
           }
         },
+        "displayName": "PSII",
         "texName": "v\\_PSII"
       },
       "v_PQ": {
@@ -531,6 +560,7 @@
             ]
           }
         },
+        "displayName": "PQ reduction",
         "texName": "v\\_PQ"
       },
       "atp_synthase": {
@@ -607,6 +637,7 @@
             ]
           }
         },
+        "displayName": "ATP synthase",
         "texName": "atp\\_synthase"
       },
       "atp_activase": {
@@ -729,6 +760,7 @@
             ]
           }
         },
+        "displayName": "proton leak",
         "texName": "proton\\_leak"
       },
       "v_ATPcons": {
@@ -993,6 +1025,7 @@
             }
           ]
         },
+        "displayName": "pH_lumen",
         "texName": "pH\\_lu"
       },
       "H_st": {
@@ -1417,6 +1450,7 @@
             }
           ]
         },
+        "displayName": "PQ",
         "texName": "pq\\_ox"
       },
       "adp": {
@@ -1438,6 +1472,7 @@
             }
           ]
         },
+        "displayName": "ADP",
         "texName": "adp"
       },
       "psbs_pr": {
@@ -1459,6 +1494,7 @@
             }
           ]
         },
+        "displayName": "psbs_pr",
         "texName": "psbs\\_pr"
       },
       "zx": {
@@ -1480,6 +1516,7 @@
             }
           ]
         },
+        "displayName": "zx",
         "texName": "zx"
       },
       "Q": {
@@ -1656,6 +1693,7 @@
             }
           ]
         },
+        "displayName": "Q",
         "texName": "Q"
       },
       "Fluo": {
@@ -1748,6 +1786,7 @@
             }
           ]
         },
+        "displayName": "Fluo",
         "texName": "Fluo"
       },
       "B0": {
@@ -2355,6 +2394,7 @@
             }
           ]
         },
+        "displayName": "B0",
         "texName": "ps2states"
       },
       "B1": {
@@ -2894,6 +2934,7 @@
             }
           ]
         },
+        "displayName": "B1",
         "texName": "ps2states"
       },
       "B2": {
@@ -3580,6 +3621,7 @@
             }
           ]
         },
+        "displayName": "B2",
         "texName": "ps2states"
       },
       "B3": {
@@ -4162,6 +4204,7 @@
             }
           ]
         },
+        "displayName": "B3",
         "texName": "ps2states"
       }
     },

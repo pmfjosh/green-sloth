@@ -9,7 +9,6 @@
     getTexNames,
     SteadyStateModelBuilder,
   } from "@computational-biology-aachen/mxlweb-core";
-  import { Base } from "@computational-biology-aachen/mxlweb-core/mathml";
 
   let { model }: { model: SteadyStateModelBuilder } = $props();
 
@@ -19,10 +18,6 @@
 
   function sym(id: string): string {
     return texNames.get(id) ?? id;
-  }
-
-  function valueTex(value: number | Base): string | null {
-    return value instanceof Base ? value.toTex(texNames) : null;
   }
 </script>
 

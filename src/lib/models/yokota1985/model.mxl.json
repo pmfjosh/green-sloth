@@ -45,6 +45,7 @@
           "type": "Num",
           "value": 0.010880542843616855
         },
+        "displayName": "H2O2",
         "texName": "H2O2"
       }
     },
@@ -343,6 +344,7 @@
             "value": 1
           }
         },
+        "displayName": "glycine decarboxylase",
         "texName": "glycine\\_decarboxylase"
       },
       "serine_glyoxylate_transaminase": {

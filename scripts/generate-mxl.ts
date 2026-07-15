@@ -22,14 +22,11 @@ import { writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import {
-  KineticModelBuilder,
-  type ModelBuilderBase,
-} from "@computational-biology-aachen/mxlweb-core";
+import type { ModelBuilderBase } from "@computational-biology-aachen/mxlweb-core";
 import { mxlJsonToModel } from "@computational-biology-aachen/mxlweb-core/mxl";
 
 // Eager glob with the same resolution the app uses, keyed by absolute-ish path.
-const modelModules = import.meta.glob<{ initModel: () => KineticModelBuilder }>(
+const modelModules = import.meta.glob<{ initModel: () => ModelBuilderBase }>(
   "../src/lib/models/*/model.ts",
   { eager: true },
 );
@@ -63,9 +60,9 @@ for (const [path, mod] of Object.entries(modelModules)) {
 
     // Reload from the emitted JSON and prove it round-trips losslessly...
     const reloaded = mxlJsonToModel(json);
-    if (!(reloaded instanceof KineticModelBuilder)) {
+    if (reloaded.constructor !== source.constructor) {
       throw new Error(
-        `reloaded model is ${reloaded.constructor.name}, expected KineticModelBuilder`,
+        `reloaded model is ${reloaded.constructor.name}, expected ${source.constructor.name}`,
       );
     }
     // ...both structurally (re-emit must be identical — catches import asymmetry)

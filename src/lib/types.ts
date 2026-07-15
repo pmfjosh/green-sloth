@@ -1,4 +1,14 @@
 import type { PamGroup } from "@computational-biology-aachen/mxlweb-core/pam";
+import type { Tags } from "./tags";
+// Rexport
+export type {
+  ExperimentalData,
+  ModelType,
+  Organism,
+  Part,
+  Tags,
+  TagValues,
+} from "./tags";
 
 /**
  * How to render an analysis result: a single chart, an explicit grid of
@@ -113,43 +123,6 @@ export type Contributor = {
 };
 
 export type ModelAnalysis = TimeCourseAnalysis | PamAnalysis | SweepAnalysis;
-
-export type Part =
-  | "PSII"
-  | "OEC"
-  | "ATP Synthase"
-  | "Cytochrome b6f"
-  | "PQ Cycle"
-  | "PC"
-  | "FNR"
-  | "PSI"
-  | "CBB Cycle"
-  | "Photorespiration";
-
-export type ModelType = "ODE" | "Steady State";
-
-/**
- * Kinds of experimental photosynthesis data a model can be used to explain.
- * Each value maps to a section on the `/data` page.
- */
-export type ExperimentalData =
-  | "PAM fluorescence"
-  | "OJIP transient"
-  | "Gas exchange"
-  | "P700 absorbance"
-  | "ECS (P515)";
-
-// Maps each tag category to its value union. Add a category here (and its
-// value type) to extend the tag system — Tags below follows automatically.
-type TagValues = {
-  "Part of Photosynthesis": Array<Part>;
-  "Model type": Array<ModelType>;
-  "Explains data": Array<ExperimentalData>;
-};
-
-export type Tags = {
-  [K in keyof TagValues]: TagValues[K];
-};
 
 export interface ModelMeta {
   slug: string;
